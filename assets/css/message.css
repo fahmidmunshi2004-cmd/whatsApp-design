@@ -140,6 +140,15 @@
 }
 
 
+.rs-chat-user-list-title-2 {
+  color: var(--tp-heading-color-2);
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
 .dropdown__menu {
   transform-origin: top;
   transform: scaleY(0);
@@ -618,4 +627,8 @@ body.dark-mode .msg-reply {
 
 body.dark-mode .send-message-area textarea {
   background: #000;
+}
+
+body.dark-mode .message-tab-btn ul li a {
+  color: #fcfdff;
 }
