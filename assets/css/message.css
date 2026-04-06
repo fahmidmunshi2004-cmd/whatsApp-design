@@ -81,7 +81,7 @@
 }
 
 .rs-chat-users-2 li.active {
-  background: var(--Roman-100, #F6F5F4);
+  background: var(--Roman-100, #F6F5F4) !important;
   border-radius: 10px;
 }
 
