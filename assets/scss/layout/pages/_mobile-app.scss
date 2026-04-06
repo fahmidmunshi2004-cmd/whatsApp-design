@@ -1,0 +1,295 @@
+@use '../../utils/' as *;
+
+
+/*----------------------------------------*/
+/*  7.9 Mobile App Start
+/*----------------------------------------*/
+
+.rs-mobile {
+    &-img {
+        @media #{$md,$xs} {
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+
+        &-2 {
+            margin-left: -88px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.67) 100%);
+                width: 93%;
+                height: 97%;
+                top: 10px;
+                left: 10px;
+                border-radius: 45px 45px 36px 36px;
+                @include transition(.4s linear);
+
+                @media #{$lg} {
+                    width: 93%;
+                    height: 97%;
+                    top: 4px;
+                }
+
+                @media #{$xs} {
+                    height: 98%;
+                    top: 0px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &-1 {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.67) 100%);
+                width: 92%;
+                height: 96%;
+                top: 10px;
+                left: 10px;
+                border-radius: 25px;
+                @include transition(.3s linear);
+
+                @media #{$xs} {
+                    height: 98%;
+                    top: 6px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+
+    &-right {
+        & .fns-56 {
+            @media #{$xl} {
+                font-size: 52px !important;
+            }
+
+            @media #{$lg} {
+                font-size: 42px !important;
+            }
+        }
+
+        & .mt-22 {
+            @media #{$lg} {
+                margin-top: 8px;
+            }
+        }
+
+        & p {
+            & br {
+                @media #{$xl,$lg,$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-app {
+        &-screen {
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            top: 50%;
+        }
+
+        &-area {
+            @media #{$md,$xs} {
+                padding-top: 50px;
+            }
+
+            @media #{$xs} {
+                padding-bottom: 25px;
+            }
+
+            & .rs-section-sub-title {
+                @media #{$xs} {
+                    font-size: 15px;
+                }
+
+            }
+
+            & .rs-mobile-app-wrapper {
+                @media #{$xs} {
+                    gap: 16px;
+                    justify-content: center;
+                }
+
+                @media (max-width: 370px) {
+                    flex-wrap: wrap;
+                }
+
+                & p {
+                    @media #{$xs} {
+                        font-size: 14px !important;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+            }
+
+            & .rs-section-title {
+                @media #{$xs} {
+                    font-size: 50px !important;
+                }
+
+                @media #{$xs} {
+                    font-size: 24px !important;
+                    font-weight: 700 !important;
+                }
+
+                & span {
+                    @media #{$md} {
+                        margin-top: 10px;
+                    }
+
+                    @media #{$xs} {
+                        margin-top: 2px;
+                    }
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 4022px;
+                height: 4022px;
+                border-radius: 100%;
+                background: #FFE3E3;
+                filter: blur(200px);
+                left: -110%;
+                bottom: -3007.813px;
+                z-index: -1;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 431px;
+                height: 431px;
+                border-radius: 431px;
+                background: #CEFFF1;
+                filter: blur(200px);
+                right: -135px;
+                top: -135px;
+                z-index: -1;
+
+            }
+        }
+
+        &-Download {
+            &-btn {
+                color: var(--tp-white-color);
+                font-size: 14px;
+                font-weight: 600;
+                border-radius: 4px;
+                background: var(--tp-red-color);
+                height: 40px;
+                display: inline-block;
+                text-align: center;
+                line-height: 40px;
+                padding: 0 31px;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                transition: .3s ease-out;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                    background: var(--tp-heading-color);
+                    z-index: -1;
+                    border-radius: 4px;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transition(.4s linear);
+                    z-index: -1;
+                }
+
+                &:hover {
+                    @include transform(translateY(-2px));
+                    box-shadow: 0 2px 15px 0 #D3D9E0;
+
+                    & svg {
+                        @include transform(rotate(-45deg));
+                    }
+                }
+            }
+        }
+
+        &-box {
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: var(--tp-white-color);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(6px);
+            padding: 16px;
+            max-width: 290px;
+            @include transition(.3s linear);
+
+            @media #{$md} {
+                max-width: inherit;
+                width: 50%;
+            }
+
+            @media #{$xs} {
+                flex-wrap: wrap;
+                max-width: inherit;
+                width: 50%;
+                justify-content: center;
+                flex: 0 0 169px;
+            }
+
+            @media (max-width: 370px) {
+                flex-wrap: nowrap;
+                flex: 0 0 100%;
+                padding: 8px;
+            }
+
+            &:hover {
+                @include transform(translateY(-3px));
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+        }
+    }
+}
+
+.phone-screen {
+    -webkit-mask-image: url("../img/mobile-app/mask-2.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    mask-image: url("../img/mobile-app/mask-2.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*----------------------------------------*/
+/*  7.9 Mobile App End
+/*----------------------------------------*/

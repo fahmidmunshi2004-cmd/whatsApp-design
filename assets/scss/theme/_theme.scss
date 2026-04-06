@@ -1,0 +1,206 @@
+@use '../utils/' as *;
+
+/*-----------------------------------------------------------------------------------/*
+    Template Name: Marketplace - Digital Marketing & SEO Agency
+    Author: RazinSoft
+    Description: Marketplace - Creative Agency HTML Template is a modern, customizable, and responsive template designed for agencies to showcase their work, services, and team with stylish layouts and interactive features.
+    Version: 1.0.0
+
+/*-----------------------------------------------------------------------------------/*
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. COMPONENTS css
+	-----------------
+		1.01 Scrool to Top
+		1.03 Button
+		1.03 Custom Animation
+		1.04 Dark Theme
+		1.05 Magic Cursor
+		1.06 Offcanvas
+		1.07 Rtl
+		1.08 Section Title
+		1.09 Preloader
+
+
+  	-----------------
+    02. THEME CSS
+	-----------------
+		2.1 Theme Default
+		2.2 Common Classes
+		2.3 Default Spacing
+
+
+  	-----------------
+    04. UTILS CSS
+	-----------------
+		4.1 Breakpoint Default
+		4.2 Color
+		4.3 Extent 
+		4.4 Mixins 
+		4.5 Typgraphy 
+		4.6 Variables 
+
+  	-----------------
+    05. FOOTER CSS
+	-----------------
+		5.1 FOOTER Default
+
+
+  	-----------------
+    06. HEADER CSS
+	-----------------
+		6.1 Header Default
+		6.2 MObile Menu
+
+		
+  	-----------------
+    07. SECTION CSS
+	-----------------
+		7.1 About
+		7.2 Add
+		7.3 Catagory
+		7.4 Contact
+		7.5 Counter
+		7.6 Details
+		7.7 Hero
+		7.8 Login
+		7.9 Mobile App
+		7.10 Post ad
+		7.11 Product
+		7.12 Profile
+		7.13 Seler Profile
+		7.14 Sell
+		7.15 User
+		7.16 Wallet
+
+**********************************************/
+
+
+@import url($font-url);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 17px;
+	font-weight: normal;
+	// color: 
+	line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+}
+
+p {
+	font-family: "Poppins", sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+	color: #57595C;
+	margin-bottom: 15px;
+	line-height: 26px;
+
+	& b {
+		color: var(--tp-common-black);
+	}
+}
+
+span {
+	font-family: "Poppins", sans-serif;
+}
+
+textarea {
+	outline: none;
+	background-color: transparent;
+	height: 150px;
+	width: 100%;
+	line-height: 56px;
+	font-size: 15px;
+	color: var(--tp-common-black);
+	border: 0;
+	border-bottom: 1px solid #57595C;
+	font-weight: 500;
+	line-height: 1.4;
+
+	@include tp-placeholder {
+		color: white;
+	}
+
+	&:focus {
+		border-color: var(--tp-common-black);
+
+		&::placeholder {
+			opacity: 1;
+		}
+	}
+
+	&::placeholder {
+		color: var(--tp-common-black);
+	}
+}
+
+
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+input {
+	outline: none;
+	border: none;
+	background: none;
+	border-bottom: 1px solid;
+	height: 56px;
+	width: 100%;
+}
+
+* ::placeholder {
+	color: var(--tp-common-black);
+	font-size: 15px;
+	opacity: 1;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+::selection {
+	color: #0d6efd;
+	background-color: #212529;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+	height: 10px;
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--tp-rom-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--tp-orange-color);
+	border-radius: 50px;
+	border-radius: 5 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--tp-red-color);
+}

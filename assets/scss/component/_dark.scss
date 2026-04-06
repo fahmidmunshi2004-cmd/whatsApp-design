@@ -1,0 +1,929 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.4  Dark Theme Start
+/*----------------------------------------*/
+
+body.dark-mode {
+    background-color: var(--tp-black-color);
+    color: var(--tp-white-color);
+
+    & .rs-header-bottom {
+        background-color: var(--tp-heading-color-2);
+        color: var(--tp-white-color);
+        border-top: 1px solid rgb(85 91 104);
+    }
+
+    & .rs-header-main-menu ul>li>a {
+        color: var(--tp-white-color) !important;
+    }
+
+    & .rs-header-heart,
+    .rs-header-notification {
+        background-color: var(--tp-heading-color-2);
+
+        & span {
+            color: var(--tp-white-color);
+        }
+
+        & i {
+            & img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    & .rs-header-main-menu ul>li>a svg {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-header-form form input {
+        background: #464b56;
+    }
+
+    & .rs-hero-sub-title span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-hero-title span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-hero-text {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .rs-section-title {
+        color: var(--tp-white-color);
+    }
+
+    & input {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-hero-img-shadow::before {
+        border: 10px solid var(--tp-heading-color-2);
+    }
+
+    & .rs-header-sticky {
+        background: var(--tp-heading-color-2);
+        border-bottom: var(--tp-heading-color-2);
+    }
+
+    & .tp-megamenu-wrapper {
+        background: var(--tp-heading-color-2);
+
+        &-2 {
+            background: var(--tp-heading-color-2);
+        }
+    }
+
+    & .rs-category-box {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-category-title a {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-contact-social,
+    .rs-category-area {
+        border-bottom: 1px solid rgb(85 91 104);
+    }
+
+    & .rs-product-top-btn a {
+        color: var(--tp-white-color);
+        border: 1px solid var(--tp-white-color);
+
+        &:hover {
+            border: 1px solid var(--tp-red-color);
+        }
+    }
+
+    & .rs-product-top-btn a svg {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-product-box {
+        border: 1px solid rgb(85 91 104);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-product-box:hover {
+        box-shadow: 0 2px 15px 0 #1a1f25;
+    }
+
+    & .rs-product-title {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-product-details-btn {
+        color: var(--tp-white-color);
+        background: var(--tp-grey-color-3);
+
+        & svg {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-count-cercle::before {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-section-title-wrapper p {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .rs-count-item {
+        background: var(--tp-heading-color-2);
+        box-shadow: 0 4px 16px 0 #161515;
+    }
+
+    & .rs-count-title {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-count-icon {
+        & img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    & .rs-mobile-app-area::before {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-product-info-head,
+    .rs-mobile-app-area::after {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-mobile-right .rs-section-sub-title {
+        color: var(--tp-white-color) !important;
+    }
+
+    & .rs-mobile-right .rs-section-title-wrapper span {
+        color: var(--tp-white-color) !important;
+    }
+
+    & .rs-mobile-right .rs-section-title-wrapper p {
+        color: var(--tp-grey-color-3) !important;
+    }
+
+    & .rs-mobile-app-box {
+        background: var(--tp-black-color);
+    }
+
+    & .rs-mobile-app-logo {
+        & img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    & .rs-mobile-app-Download-btn.rs-btn {
+        &:hover {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-details-wrapper,
+    .rs-about-top-content {
+        background: var(--tp-heading-color-2) !important;
+
+        & .rs-section-sub-title {
+            color: var(--tp-white-color) !important;
+        }
+
+        & p {
+            color: var(--tp-grey-color-3) !important;
+        }
+    }
+
+    & .rs-product-about-title,
+    .rs-product-info-title,
+    .rs-totle__views a span,
+    .rs-product-details-info-bottom-title,
+    .rs-product-details-info-title a,
+    .rs-contact-input-title,
+    .rs-contact-title,
+    .rs-about-title {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-contact-text,
+    .rs-about-text {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .rs-contact-area {
+        background: var(--tp-black-color) !important;
+    }
+
+    & .rs-contact-input-item {
+        & input {
+            background: #464b56;
+        }
+
+        & textarea {
+            background: #464b56;
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-product-details-info-posted span,
+    .rs-product-details-info-condition span,
+    .rs-product-details-info-location span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-product-location-area,
+    .rs-product-details-info-btn {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-product-details-info-bottom,
+    .rs-product-details-info {
+        background: var(--tp-black-color) !important;
+    }
+
+    & .rs-product-details-info-select {
+        background: #464b56;
+        color: var(--tp-white-color);
+    }
+
+    & .rs-totle__views a {
+        background: var(--tp-heading-color-2);
+        border: 1px solid var(--tp-rom-color);
+    }
+
+    & .rs-post-cta-title-2,
+    .rs-post-cta-title,
+    .rs-post-ad-title,
+    .rs-product-description-title,
+    .rs-product-brand span,
+    .rs-product-model span,
+    .rs-product-warranty span,
+    .rs-product-color span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-product-details-massage-btn {
+        background: var(--tp-grey-color-3);
+        color: var(--tp-white-color);
+        border: 1px solid var(--tp-black-color);
+
+        &:hover {
+            color: var(--tp-heading-color-2);
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    & .rs-post-ad-box {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .step-tab {
+        border: 1px solid var(--tp-grey-color-3);
+        background: var(--tp-black-color);
+        color: var(--tp-white-color);
+    }
+
+    & .step-tab.completed {
+        border-radius: 4px;
+        color: var(--tp-white-color);
+        border: 1px solid var(--tp-red-color);
+        background: var(--tp-red-color);
+    }
+
+    & .rs-post-location-contant,
+    .rs-post-cta-contant {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-post-cta-select {
+        & select {
+            background-color: #464b56;
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-post-cta-contant {
+        & input {
+            background-color: #464b56;
+        }
+
+        & textarea {
+            background-color: #464b56;
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-post-location-contant {
+        & input {
+            background-color: #464b56;
+        }
+    }
+
+    & .color-box {
+        background: var(--tp-black-color) !important;
+        color: var(--tp-white-color);
+    }
+
+    & .browse-btn {
+        color: var(--tp-white-color);
+        border: 1px solid var(--tp-grey-color-3);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .prev-btn {
+        color: var(--tp-white-color);
+        border: 1px solid var(--tp-grey-color-3);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-product-details-info-rating-author-name {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-seler-information-title,
+    .rs-product-filter-accordion,
+    .filter-title,
+    .rs-product-filter-title,
+    .rs-product-head-title,
+    .rs-product-details-info-rating span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-product-details-info-box {
+        border: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-product-details-info-rating-area {
+        border-bottom: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-product-details-contact a {
+        color: var(--tp-white-color);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-product-details-price-contact-icon-bg {
+        background: var(--tp-grey-color-3);
+    }
+
+    & .has-dropdown .sub-dropdown {
+        background: var(--tp-black-color);
+    }
+
+    & .rs-profile-side-bar-head,
+    .filter-box,
+    .rs-product-filter-head,
+    .rs-product-head {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .accordion {
+        --bs-accordion-bg: var(--tp-heading-color-2);
+    }
+
+    & .form-check label {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .form-check-input {
+        --bs-form-check-bg: var(--tp-heading-color-2);
+    }
+
+    & .filter-box {
+        border: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .range-values cite {
+        border: 1px solid var(--tp-heading-color-2);
+        background: var(--tp-black-color);
+
+        & span {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .range-values {
+        border-bottom: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-product-name button {
+        color: var(--tp-white-color);
+        background: var(--tp-heading-color-2);
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    & .rs-product-filter.active {
+        border: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-product-price-menu ul>li>a {
+        color: var(--tp-white-color);
+        border: 1px solid var(--tp-grey-color-3);
+        background: var(--tp-heading-color-2);
+
+        & svg {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-product-price-menu ul>li .rs-product-price-dropdown {
+        border: 1px solid var(--tp-grey-color-3);
+        background: var(--tp-heading-color-2);
+
+        & ul {
+            & li {
+                & a {
+                    color: var(--tp-white-color);
+                }
+            }
+        }
+    }
+
+    & .rs-product-menu-icon a {
+        background: var(--tp-heading-color-2);
+        border: 1px solid var(--tp-grey-color-3);
+
+        & svg {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-product-menu__icon.active {
+        border: 1px solid var(--tp-rom-color);
+
+        & svg {
+            color: var(--tp-red-color);
+            transition: none;
+        }
+    }
+
+    & .rs-product-item-show-page a {
+        border: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-product-item-show-btn {
+        background: var(--tp-heading-color-2);
+        border: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-product-item-show-btn:hover svg {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-footer-download-app a {
+        background: var(--tp-black-color);
+
+        & img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    & .rs-filter-side-btn button {
+        border: 1px solid var(--tp-grey-color-3);
+        background: var(--tp-heading-color-2);
+        color: var(--tp-white-color);
+
+        & svg {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-filter-close {
+        background: var(--tp-black-color);
+
+        & svg {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .rs-product-filter-head {
+        @media #{$lg,$md,$xs} {
+            border-radius: 0;
+        }
+    }
+
+    & .rs-profile-side-bar,
+    .rs-seler-information-area {
+        background: var(--tp-heading-color-2);
+        border: 1px solid var(--tp-grey-color-3);
+
+        @media #{$xs} {
+            border: none;
+            border-radius: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        & .rs-featured-top-info {
+            background: var(--tp-heading-color-2);
+        }
+    }
+
+    & .rs-seler-information-area a {
+        height: 56px;
+        background: var(--tp-black-color);
+        border: 1px solid transparent;
+        color: var(--tp-white-color);
+    }
+
+    & .rs-seler-information-share-btn {
+        background: var(--tp-black-color);
+
+        & img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    & .rs-riview-list-area,
+    .rs-related-item-card-box,
+    .rs-product-head-top {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-related-item-title,
+    .rs-product-head-top-btn button {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-riview-list-box {
+        background: var(--tp-black-color) !important;
+    }
+
+    & .rs-riview-list-name span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-riview-list-text p {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .rs-riview-list-top {
+        border-bottom: 1px solid var(--tp-grey-color-2);
+    }
+
+    & .rs-profile-side-bar-list ul li a {
+        color: var(--tp-heading-color);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    & .rs-profile-side-bar-list ul li a {
+        color: var(--tp-grey-color-2);
+
+        & svg {
+            color: var(--tp-grey-color);
+        }
+    }
+
+    & .rs-profile-input-title,
+    .rs-profile-title,
+    .rs-profile-user-name,
+    .rs-profile-side-bar-list ul li.active a {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-profile-body,
+    .rs-profile-head {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-notification-btn,
+    .my-adds-btn-2,
+    .my-adds-btn,
+    .rs-promote-btn,
+    .verifiedBtn {
+        background: none !important;
+        color: var(--tp-white-color) !important;
+    }
+
+    & .my-adds-btn,
+    .my-adds-btn-2 {
+        &::before {
+            display: none;
+        }
+    }
+
+    & .sold-out.active .my-adds-btn-2:hover {
+        background: transparent !important;
+    }
+
+    & .sold-out.active .my-adds-btn:hover {
+        background: transparent !important;
+    }
+
+    & .my-ads.active .my-adds-btn:hover {
+        background: transparent !important;
+    }
+
+    & .my-ads.active .my-adds-btn-2:hover {
+        background: transparent !important;
+    }
+
+    & .rs-profile-info-form form input {
+        background: #464b56;
+        border: 1px solid var(--tp-grey-color-3);
+
+        &::placeholder {
+            color: var(--tp-grey-color-2);
+        }
+    }
+
+    & .rs-transaction-title {
+        background: var(--tp-heading-color-2) !important;
+        color: var(--tp-white-color);
+    }
+
+    & .rs-checkout-form-top,
+    .rs-transaction-card-body {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-transaction-card {
+        background: var(--tp-black-color) !important;
+    }
+
+    & .rs-checkout-autopay-title,
+    .rs-checkout-info-title,
+    .rs-promote-price span,
+    .rs-promote-title,
+    .rs-transaction-card-body .value {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-profile-note,
+    .rs-checkout-form-bottom,
+    .rs-promote-box {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-restore-btn {
+        background: var(--tp-heading-color-2);
+        border: 1px solid var(--tp-red-color) !important;
+    }
+
+    & .rs-promote-text p {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .rs-checkout-info-title {
+        border-bottom: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-profile-note-title,
+    .rs-checkout-input-item .rs-checkout-form-label {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-password-change-input-item input,
+    .rs-checkout-input-item .rs-checkout-form-input {
+        background: #464b56;
+        color: var(--tp-white-color);
+    }
+
+    & .rs-checkout-autopay-switch label {
+        background: #000000;
+    }
+
+    & .rs-checkout-autopay-text {
+        color: var(--tp-grey-color-3);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-profile-note p {
+        color: var(--tp-grey-color-3);
+    }
+
+    &.rs-password-change-input-item input {
+        &::placeholder {
+            color: var(--tp-grey-color-2);
+        }
+    }
+
+    & .rs-service-summary-title {
+        color: var(--tp-white-color);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-checkout-payment-method-title,
+    .rs-summary-row span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-payment-method-img-btn {
+        border: 1px solid var(--Gray-100, #EDEEF1);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-payment-method-img-btn.active {
+        border-radius: 4px;
+        border: 2px solid var(--tp-red-color);
+        background: var(--tp-black-color);
+    }
+
+    & .rs-review-area,
+    .rs-payment-actions {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-checkout-right-center {
+        border: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-summary-col:last-child {
+        border-bottom: 1px solid var(--tp-grey-color-3);
+    }
+
+    & .rs-note-box {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-notification-title,
+    .rs-notification-date,
+    .rs-chat-user-list-title,
+    .rs-note-box span {
+        color: var(--tp-white-color);
+    }
+
+    & .rs-note-box p {
+        color: var(--tp-grey-color-2);
+    }
+
+    & .rs-payment-method-cancel-btn,
+    .rs-payment-cancel {
+        color: var(--tp-white-color) !important;
+        background: transparent !important;
+        border: 1px solid var(--tp-red-color) !important;
+    }
+
+    & .tp-offcanvas-area,
+    .rs-seler-information-btn-fix,
+    .rs-product-make-offer,
+    .rs-password-change-input-box,
+    .rs-featured-ads-area,
+    .rs-notification-card,
+    .sand-message,
+    .rs-massage-id,
+    .rs-massage-right-area,
+    .rs-chat-custom-col {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .tp-offcanvas-area .rs-header-top-right {
+        background: var(--tp-black-color);
+    }
+
+    & .rs-product-make-offer input,
+    .sand-message input,
+    .rs-chat-input {
+        background: #464b56;
+    }
+
+    & .tp-offcanvas-info span a {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .tp-offcanvas-social a {
+        border: 1px solid var(--tp-white-color);
+
+        & i {
+            color: var(--tp-white-color);
+        }
+    }
+
+    & .tp-offcanvas-menu ul li a,
+    .rs-payment-title,
+    .custom-checkbox cite,
+    .rs-product-make-offer label,
+    .rs-product-make-offer-title,
+    .rs-template-settings-title,
+    .rs-template-settings-button button,
+    .rs-password-change-title,
+    .rs-review-date span,
+    .rs-review-name a,
+    .rs-featured-value,
+    .rs-featured-ads-title,
+    .rs-chat-user-active,
+    .rs-chat-user-name {
+        color: var(--tp-white-color);
+    }
+
+    & .fix-btn,
+    .next-btn-fix,
+    .rs-details-bottom-area {
+        @media #{$xs} {
+            background: var(--tp-heading-color-2);
+        }
+    }
+
+    & .rs-product-make-offer textarea {
+        background: #464b56;
+    }
+
+    & .rs-payment-method-select-box select,
+    #reportReason {
+        background-color: #464b56;
+        color: var(--tp-white-color);
+    }
+
+    & .rs-product-make-offer p {
+        color: var(--tp-grey-color-2);
+    }
+
+    & .rs-chat-users li.active {
+        background: var(--tp-heading-color);
+    }
+
+    & .my-message {
+        background: var(--tp-black-color);
+        color: var(--tp-white-color);
+    }
+
+    & .rs-notification-text {
+        color: var(--tp-grey-color-3);
+    }
+
+    & .rs-featured-ads-card {
+        background: var(--tp-black-color);
+    }
+
+    & .rs-featured-amount,
+    .rs-featured-method,
+    .rs-featured-transection {
+        color: var(--tp-white-color);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .profile-side-bar {
+        & img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    & .rs-featured-ads-card-top {
+        border-bottom: 1px solid var(--tp-grey-color-3);
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px),
+    (max-width: 767px) {
+        .rs-featured-bottom-info {
+            background: var(--tp-heading-color-2);
+            border: 1px solid var(--tp-grey-color-3);
+        }
+    }
+
+    & .rs-review-box {
+        background: var(--tp-black-color) !important;
+    }
+
+    & .rs-review-text p {
+        color: var(--tp-grey-color-2);
+    }
+
+    & .rs-review-right button {
+        color: var(--tp-white-color);
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-password-change-btn {
+        background: var(--tp-heading-color-2) !important;
+    }
+
+    & .rs-template-settings {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-template-settings-icon {
+        background: var(--tp-heading-color-2);
+    }
+
+    & .rs-template-settings-button {
+        background-color: var(--tp-black-color);
+    }
+
+    & .rs-template-settings-button button.active {
+        background: var(--tp-grey-color-4);
+    }
+
+    & .form-group {
+        & label {
+            color: var(--tp-white-color) !important;
+        }
+    }
+
+    & .rs-riview-list-date span {
+        color: var(--tp-white-color);
+    }
+}
+
+/*----------------------------------------*/
+/*  1.4  Dark Theme End
+/*----------------------------------------*/

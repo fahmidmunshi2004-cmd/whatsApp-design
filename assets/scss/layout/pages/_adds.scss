@@ -1,0 +1,81 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  7.2 Adds Start
+/*----------------------------------------*/
+
+.rs {
+    &-more {
+        &-option {
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            background: var(--tp-grey-color);
+            backdrop-filter: blur(4px);
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+
+            &.active {
+                & .rs-more-option-item {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &-item {
+                position: absolute;
+                right: 0;
+                top: 35px;
+                opacity: 0;
+                visibility: hidden;
+                @include transition(.3s linear);
+
+                & ul {
+                    background: var(--tp-white-color);
+                    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+                    border-radius: 5px;
+                    height: auto;
+                    width: 200px;
+                    padding: 10px;
+
+                    & li {
+                        text-align: start;
+                        padding: 10px 16px;
+                        @include transition(.3s linear);
+
+                        &:hover {
+                            background: var(--tp-red-color);
+                            border-radius: 4px;
+
+                            & a {
+                                color: var(--tp-white-color);
+                            }
+                        }
+
+                        & a {
+                            color: var(--tp-heading-color);
+                            font-size: 14px;
+                            font-weight: 500;
+                            @include transition(.3s linear);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.my-page {
+    display: none;
+}
+
+.my-page.active {
+    display: block;
+}
+
+/*----------------------------------------*/
+/*  7.2 Adds End
+/*----------------------------------------*/

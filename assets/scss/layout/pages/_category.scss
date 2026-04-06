@@ -1,0 +1,144 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  7.3 Category Start
+/*----------------------------------------*/
+
+.rs-category {
+    &-area {
+        border-bottom: 1px solid rgb(237, 238, 241);
+
+        @media #{$xs} {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+        }
+
+        & .rs-section-title-wrapperr {
+            @media #{$xs} {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &-wrapper {
+        gap: 24px;
+        flex-wrap: wrap;
+
+        @media #{$xxlm,$xl,$lg} {
+            justify-content: center !important;
+        }
+
+        @media #{$md,$xs} {
+            overflow-y: scroll;
+            flex-wrap: nowrap;
+            scrollbar-width: none;
+        }
+    }
+
+    &-title {
+        margin-bottom: 0;
+
+        & a {
+            color: var(--tp-heading-color);
+            font-size: 16px;
+            font-weight: 600;
+            @include transition(.3s linear);
+            line-height: 1;
+
+            @media #{$lg,$xs} {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &-item {
+        color: var(--tp-grey-color-3);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &-img {
+        width: 140px;
+        height: 100px;
+        margin: auto;
+        object-fit: cover;
+
+        & img {
+            width: 140px;
+            height: 100px;
+            transition: .3s ease-in-out;
+            object-fit: cover;
+        }
+    }
+
+    &-box {
+        border-radius: 8px;
+        background: var(--tp-white-color);
+        padding: 12px 16px;
+        width: 268px;
+        position: relative;
+        overflow: hidden;
+        @include transition(.3s linear);
+        flex: 0 0 260px;
+
+        @media #{$xl} {
+            flex: 0 0 260px;
+        }
+
+        @media #{$lg} {
+            flex: 0 0 215px;
+            padding: 12px 10px;
+        }
+
+        @media #{$xs} {
+            flex: 0 0 190px;
+            padding: 12px 10px;
+        }
+
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 66px;
+            height: 66px;
+            background: #D92EAE;
+            filter: blur(200px);
+            border-radius: 100%;
+            right: -17.2px;
+            bottom: -17px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 66px;
+            height: 66px;
+            background: #D92EAE;
+            filter: blur(200px);
+            border-radius: 100%;
+            left: -17.2px;
+            top: -17px;
+        }
+
+        &:hover {
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+
+            & .rs-category-title {
+                & a {
+                    color: var(--tp-red-color);
+                }
+            }
+
+            & .rs-category-img {
+                & img {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------*/
+/*  7.3 Category End
+/*----------------------------------------*/

@@ -1,0 +1,133 @@
+@use '../../utils/' as *;
+
+
+/*----------------------------------------*/
+/*  7.5 counter Start
+/*----------------------------------------*/
+.rs-count {
+    &-wrapper {
+        gap: 24px;
+    }
+
+    &-icon {
+        @media #{$xs} {
+            @include transform(translateY(5px));
+        }
+
+        & img {
+            width: 32px;
+            height: 32px;
+            max-width: inherit;
+        }
+    }
+
+    &-area {
+        @media #{$lg} {
+            margin-bottom: 60px;
+        }
+
+        & .rs-section-title {
+            @media #{$md,$xs} {
+                margin-bottom: 8px !important;
+            }
+        }
+    }
+
+    &-cercle {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 431px;
+            height: 431px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            border-radius: 431px;
+            background: #FFCECE;
+            z-index: -1;
+            filter: blur(200px);
+        }
+    }
+
+    &-item {
+        gap: 12px;
+        border-radius: 4px;
+        background: var(--tp-white-color);
+        box-shadow: 0 4px 16px 0 #EFEFEF;
+        padding: 27px 24px;
+        min-height: 166px;
+
+        @media #{$lg,$md,$xs} {
+            margin-bottom: 20px;
+        }
+
+        @media #{$xl} {
+            padding: 27px 10px;
+        }
+    }
+
+    &-counter {
+        margin-bottom: 0;
+
+        & span {
+            color: var(--tp-red-color);
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 0;
+
+            @media #{$xs} {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            & i {
+                color: var(--tp-red-color);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 40px;
+
+                @media #{$md} {
+                    font-size: 35px;
+                }
+
+                @media #{$xs} {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &-title {
+        color: var(--tp-heading-color);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        margin-bottom: 5px;
+
+        @media #{$xs} {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+        }
+    }
+
+    &-text {
+        color: var(--tp-grey-color-4);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 0;
+
+        @media #{$xl} {
+            font-size: 13px;
+        }
+    }
+}
+
+/*----------------------------------------*/
+/*  7.5 counter End
+/*----------------------------------------*/

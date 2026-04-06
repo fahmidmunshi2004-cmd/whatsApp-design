@@ -1,0 +1,65 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  6.2 Mobile Menu Start
+/*----------------------------------------*/
+
+.tp-offcanvas-menu {
+    & ul {
+        & li {
+            list-style: none;
+            position: relative;
+
+            & a {
+                font-size: 15px;
+                font-weight: 500;
+                display: block;
+                padding: 6px 0;
+            }
+
+            &.active {
+                &>a {
+                    color: var(--tp-secondary-color);
+                }
+
+                &>button.tp-sidemenu-close {
+                    & i {
+                        @include transform(rotate(90deg));
+                    }
+                }
+            }
+
+            & .tp-megamenu-wrapper {
+                margin-left: 20px;
+                display: none;
+                position: inherit;
+
+                &-2 {
+                    margin-left: 20px;
+                    display: none;
+                    position: inherit;
+                }
+            }
+
+        }
+    }
+}
+
+
+.tp-sidemenu-close {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+
+    & i {
+        @include transition(.3s);
+    }
+}
+
+/*----------------------------------------*/
+/*  6.2 Mobile Menu End
+/*----------------------------------------*/

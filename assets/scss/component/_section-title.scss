@@ -1,0 +1,70 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.8 Section Title Start
+/*----------------------------------------*/
+
+.rs-section {
+    &-sub {
+        &-title {
+            color: var(--tp-red-color);
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 40px;
+            display: inline-block;
+
+            @media #{$md} {
+                font-size: 22px;
+                margin-bottom: 0;
+            }
+
+            @media #{$xs} {
+                font-size: 20px;
+                margin-bottom: 0;
+                line-height: 32px;
+
+            }
+        }
+    }
+
+    &-title {
+        color: var(--tp-heading-color);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 48px;
+        margin-bottom: 0;
+
+        @media #{$md} {
+            font-size: 30px !important;
+            line-height: 32px;
+        }
+
+        @media #{$xs} {
+            line-height: 32px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        &-wrapper {
+            & p {
+                color: var(--tp-heading-color);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 0;
+
+                & br {
+                    @media #{$xs,$md} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*----------------------------------------*/
+/*  1.8 Section Title End
+/*----------------------------------------*/

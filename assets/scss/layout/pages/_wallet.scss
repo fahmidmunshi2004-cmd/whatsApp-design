@@ -1,0 +1,518 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  7.15 Wallet Start
+/*----------------------------------------*/
+.rs-wallet {
+    &-card {
+        background: rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+
+        @media #{$xs} {
+            padding: 16px;
+
+            @media(max-width: 345px) {
+                padding: 8px;
+            }
+        }
+
+        &-content {
+            bottom: 32px;
+            left: 34px;
+
+            @media #{$xs} {
+                width: 80%;
+            }
+
+            &-2 {
+                display: flex;
+                flex-direction: column;
+                height: 75%;
+                justify-content: space-between;
+                width: 85%;
+
+                @media #{$xs} {
+                    width: 100%;
+                    left: 0;
+                    padding: 12px;
+                    height: 100%;
+                    top: 0;
+                }
+            }
+        }
+
+        &-number {
+            color: var(--tp-white-color);
+            font-size: 20px;
+            font-weight: 600;
+
+            @media #{$xs} {
+                font-size: 14px;
+            }
+        }
+
+        &-name {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 10px;
+            font-weight: 400;
+            flex: 0 0 85px;
+
+            & span {
+                color: var(--tp-white-color);
+                font-size: 14px;
+                font-weight: 500;
+                display: block;
+                line-height: .8;
+            }
+        }
+
+        &-date {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 10px;
+            font-weight: 400;
+
+            & span {
+                color: var(--tp-white-color);
+                font-size: 14px;
+                font-weight: 500;
+                display: block;
+                line-height: .8;
+            }
+        }
+
+        &-delate {
+            &-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                text-align: center;
+                line-height: 40px;
+                position: relative;
+                z-index: 1;
+
+                @media #{$xs} {
+                    margin-left: 0;
+                    width: 32px;
+                    height: 32px;
+                    line-height: 32px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.16);
+                    backdrop-filter: blur(2px);
+                    top: 0;
+                    left: 0;
+                    border-radius: 4px;
+                    z-index: -1;
+                    @include transition(.3s linear);
+                    animation: zoom 1.7s alternate infinite ease-in;
+                }
+
+                & svg {
+                    @media #{$xs} {
+                        width: 14px;
+                        height: 14px;
+                        @include transform(translateY(-2px));
+                    }
+                }
+            }
+        }
+
+        &-1 {
+            @media(max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-2 {
+            margin-bottom: 16px;
+
+            & img {
+                @media #{$xs} {
+                    max-width: 100% !important;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+
+            & .wallet-logo {
+                @media #{$xs} {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            @media(min-width: 769px) {
+                display: none;
+            }
+        }
+
+        &-3 {
+            @media #{$xs} {
+                background: none;
+                cursor: pointer;
+                backdrop-filter: none;
+                padding: 0;
+            }
+
+            & img {
+                @media #{$xs} {
+                    max-width: 280px !important;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        & img {
+            &.br-8 {
+                max-width: inherit;
+            }
+        }
+
+        &-bottom {
+            @media #{$xs} {
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &-box {
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+
+        @media #{$xs} {
+            cursor: pointer;
+        }
+    }
+
+    &-items {
+        @media #{$xs} {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 16px;
+        }
+    }
+
+    &-wrapper {
+        padding: 24px;
+        overflow: hidden;
+
+        @media #{$xs} {
+            padding: 16px;
+            display: block !important;
+
+            @media(max-width: 345px) {
+                padding: 8px;
+            }
+        }
+    }
+
+    &-balance {
+        color: var(--tp-white-color);
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 0;
+
+        @media #{$xs} {
+            font-size: 24px;
+            line-height: 1.8;
+
+            @media(max-width: 345px) {
+                font-size: 20px;
+                line-height: 1.5;
+            }
+        }
+
+        &-text {
+            @media #{$xs} {
+                gap: 0;
+                justify-content: space-between;
+            }
+
+            & p {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 0;
+
+                @media #{$xs} {
+                    font-size: 14px;
+
+                    @media(max-width: 345px) {
+                        font-size: 10px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+        &-add {
+            color: var(--tp-white-color);
+            font-size: 14px;
+            font-weight: 500;
+            height: 40px;
+            display: inline-block;
+            padding: 8px;
+            line-height: 24px;
+            position: relative;
+            z-index: 1;
+
+            @media #{$xs} {
+                width: 40px;
+                height: 40px;
+
+                @media(max-width: 370px) {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+
+            & svg {
+                @media #{$xs} {
+                    margin-left: 0;
+
+                    @media(max-width: 370px) {
+                        margin-left: 0 !important;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+
+            & span {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                background: rgba(255, 255, 255, 0.16);
+                backdrop-filter: blur(2px);
+                top: 0;
+                left: 0;
+                z-index: -1;
+                @include transition(.3s linear);
+                animation: zoom2 1.8s alternate infinite ease-in;
+            }
+
+            & svg {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    &-slide {
+        & .swiper-slide.swiper-slide-active {
+            width: auto !important;
+            margin-right: 0 !important;
+        }
+
+        & .swiper-slide.swiper-slide-next {
+            width: auto !important;
+            margin-right: 0 !important;
+        }
+
+        & .swiper-slide {
+            width: auto !important;
+            margin-right: 0 !important;
+        }
+
+        & .swiper-wrapper {
+            gap: 24px;
+        }
+    }
+
+    &-chip {
+        &-icon {
+            @media #{$xs} {
+                & svg {
+                    width: 22px;
+                    height: 16px;
+                }
+            }
+
+            & .rs-wallet-icon-top {
+                width: 40px;
+                height: 16px;
+            }
+        }
+
+    }
+
+}
+
+.rs-transaction {
+    &-title {
+        color: var(--tp-heading-color);
+        font-size: 32px;
+        font-weight: 600;
+
+        @media #{$xs} {
+            font-size: 24px;
+        }
+    }
+
+    &-card {
+        margin-bottom: 16px;
+
+        &-body {
+            @media(max-width: 340px) {
+                padding: 8px;
+            }
+        }
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+
+            @media(max-width: 340px) {
+                padding: 8px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-body {
+            & .label {
+                color: var(--tp-grey-color-4);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22px;
+                margin-bottom: 4px;
+
+
+
+                @media #{$md} {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                @media #{$xs} {
+                    width: 50%;
+                    padding: 8px;
+                    margin-bottom: 0;
+                    align-items: center;
+                    padding: 9px;
+
+                    @media(max-width: 395px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            & .value {
+                color: var(--tp-heading-color-2);
+                font-size: 16px;
+                font-style: normal;
+                line-height: 24px;
+                font-weight: 500;
+
+                @media #{$md} {
+                    font-size: 14px;
+                }
+
+                @media #{$xs} {
+                    width: 50%;
+                    padding: 8px;
+                    font-size: 15px;
+
+                    @media(max-width: 395px) {
+                        font-size: 13px;
+                    }
+
+                    @media(max-width: 340px) {
+                        padding: 5px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-item {
+        flex: 0 0 225px;
+        position: relative;
+
+        @media #{$xs} {
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid #747475;
+            justify-content: space-between;
+            margin-top: -1px;
+            background: #dddddd2e;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 100%;
+                background: #747475;
+                top: 0;
+                left: 50%;
+            }
+        }
+
+        &:nth-last-child(-n+2) {
+            flex: 0 0 120px;
+
+            @media #{$xs} {
+                flex: 0 0 100%;
+            }
+        }
+
+        @media #{$xl,$lg,$md} {
+            flex: 0 0 auto;
+
+            &:nth-last-child(-n+2) {
+                flex: 0 0 auto;
+            }
+
+        }
+
+    }
+}
+
+
+@keyframes zoom {
+    0% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes zoom2 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/*----------------------------------------*/
+/*  7.15 Wallet End
+/*----------------------------------------*/

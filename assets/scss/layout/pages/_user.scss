@@ -1,0 +1,141 @@
+@use '../../utils/' as *;
+
+/*----------------------------------------*/
+/*  7.14 User Start
+/*----------------------------------------*/
+.rs-user {
+    &-bg {
+        z-index: 1;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.60) 100%);
+            z-index: -1;
+
+            @media #{$lg} {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.90) 100%);
+            }
+        }
+    }
+
+    &-shape {
+        position: relative;
+
+        @media #{$xs} {
+            padding-top: 50px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 799px;
+            height: 799px;
+            top: 0;
+            left: 0;
+            border-radius: 100%;
+            background: #003D3A;
+            filter: blur(400px);
+            z-index: 2;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 799px;
+            height: 799px;
+            top: 0;
+            right: 0;
+            border-radius: 100%;
+            background: #3D0000;
+            filter: blur(400px);
+            z-index: 2;
+        }
+    }
+
+    &-name {
+        & a {
+            color: var(--tp-white-color);
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+        }
+
+        & span {
+            color: #B3BAC6;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &-text {
+        & p {
+            color: var(--tp-white-color);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 0;
+
+            @media(max-width: 350px) {
+                text-align: justify;
+            }
+        }
+    }
+
+    &-box {
+        position: relative;
+        z-index: 5;
+        padding: 24px;
+        backdrop-filter: blur(10px);
+
+        @media #{$lg} {
+            margin-bottom: 24px;
+        }
+
+        @media #{$xs} {
+            padding: 16px;
+        }
+
+        &:hover {
+            &::before {
+                @include transform(scale(1.04));
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @include transition(.3s linear);
+        }
+
+        &-row {
+            @media #{$md,$xs} {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                overscroll-behavior-y: contain;
+                scrollbar-width: none;
+                position: relative;
+            }
+        }
+    }
+}
+
+/*----------------------------------------*/
+/*  7.14 User End
+/*----------------------------------------*/

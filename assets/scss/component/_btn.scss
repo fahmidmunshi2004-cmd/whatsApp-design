@@ -1,0 +1,300 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.2 Button start
+/*----------------------------------------*/
+.rs-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    border: 1px solid var(--tp-red-color);
+
+    & svg {
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        color: var(--tp-black-color);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.137);
+        border-radius: 4px;
+        background: transparent;
+        border: 1px solid var(--tp-red-color);
+
+        & svg {
+            color: var(--tp-heading-color);
+        }
+
+        &:before {
+            transform: skewX(-45deg) scale(1, 1);
+        }
+    }
+
+    &:before {
+        content: "";
+        background: var(--tp-grey-color);
+        transform: skewX(-45deg) scale(0, 1);
+        position: absolute;
+        top: 0;
+        left: -20%;
+        bottom: 0;
+        right: -20%;
+        transition: all 0.6s;
+        z-index: -1;
+    }
+
+    &-2 {
+        &:hover {
+            border-radius: 8px;
+            color: var(--tp-white-color);
+        }
+
+        &:before {
+            background: var(--tp-red-color);
+        }
+    }
+}
+
+.rs-my-page-btn {
+    color: var(--tp-red-color);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid var(--tp-red-color);
+    background: var(--tp-white-color);
+    height: 48px;
+    line-height: 48px;
+    padding: 0 23px;
+    flex: 0 0 auto;
+
+    @media #{$xs} {
+        font-size: 16px;
+        border-radius: 6px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    &-2 {
+        background: var(--tp-red-color);
+        border-radius: 4px;
+        color: var(--tp-white-color);
+        font-size: 14px;
+        font-weight: 400;
+        height: 40px;
+        padding: 0 19px;
+
+        @media #{$xs} {
+            font-size: 12px;
+            padding: 0 5px !important;
+        }
+    }
+}
+
+
+.rs-restore-button {
+    border-radius: 4px;
+    background: var(--Gray-50, #F6F7F9);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12) inset;
+    height: 40px;
+    line-height: 40px;
+}
+
+.rs-restore-btn {
+    color: var(--tp-red-color);
+    font-size: 14px;
+    font-weight: 400;
+    border: none !important;
+    border-radius: 4px !important;
+}
+
+.rs-save-btn {
+    position: absolute !important;
+    bottom: 0;
+    right: 24px;
+    color: var(--tp-white-color);
+    font-size: 16px;
+    font-weight: 500;
+    height: 56px;
+    background: var(--tp-red-color);
+    border-radius: 4px;
+    padding: 5px 24px;
+    width: 240px;
+
+    @media #{$xs} {
+        right: 0;
+        width: 100%;
+        position: inherit !important;
+        margin-bottom: 0;
+        margin-top: 16px;
+    }
+}
+
+
+.rs-payment-method-cancel-btn {
+    border-color: transparent !important;
+    color: var(--tp-heading-color) !important;
+    @include transition(.3s linear);
+
+    &:hover {
+        color: var(--tp-white-color) !important;
+    }
+}
+
+.rs-profile-save-btn {
+    position: relative !important;
+    margin-left: auto;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    right: 0;
+}
+
+
+
+//====== my-ads-btn =============//
+
+.my-ads {
+    & .my-adds-btn {
+        color: var(--tp-heading-color);
+        border: 1px solid var(--tp-grey-color-5);
+        width: 140px;
+        justify-content: center !important;
+        padding: 0;
+
+        &:hover {
+            box-shadow: inherit !important;
+            border-color: 1px solid var(--tp-heading-color) !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    & .my-adds-btn-2 {
+        color: var(--tp-heading-color);
+        border: 1px solid var(--tp-grey-color-5);
+        width: 140px;
+        justify-content: center !important;
+        padding: 0;
+
+        &:hover {
+            box-shadow: inherit !important;
+            border-color: 1px solid var(--tp-heading-color) !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    &.active {
+        & .my-adds-btn {
+            color: var(--tp-red-color);
+            border: 1px solid var(--tp-red-color);
+
+            &:hover {
+                box-shadow: inherit !important;
+                border-color: var(--tp-red-color) !important;
+                background: var(--tp-rom-color) !important;
+                border-radius: 8px !important;
+            }
+        }
+
+        & .my-adds-btn-2 {
+            color: var(--tp-heading-color);
+            border: 1px solid var(--tp-grey-color-5);
+
+            &:hover {
+                box-shadow: inherit !important;
+                border-color: inherit !important;
+                background: var(--tp-rom-color) !important;
+                border-radius: 8px !important;
+            }
+        }
+    }
+}
+
+.sold-out {
+    & .my-adds-btn {
+        color: var(--tp-heading-color);
+        border: 1px solid var(--tp-grey-color-5);
+        width: 140px;
+        justify-content: center !important;
+        padding: 0;
+
+        &:hover {
+            box-shadow: inherit !important;
+            border-color: 1px solid var(--tp-heading-color) !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    & .my-adds-btn-2 {
+        color: var(--tp-heading-color);
+        border: 1px solid var(--tp-grey-color-5);
+        width: 140px;
+        justify-content: center !important;
+        padding: 0;
+
+        &:hover {
+            box-shadow: inherit !important;
+            border-color: 1px solid var(--tp-heading-color) !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    &.active {
+        & .my-adds-btn {
+            color: var(--tp-heading-color);
+            border: 1px solid var(--tp-grey-color-5);
+
+            &:hover {
+                box-shadow: inherit !important;
+                border-color: inherit !important;
+                background: var(--tp-rom-color) !important;
+                border-radius: 8px !important;
+            }
+        }
+
+        & .my-adds-btn-2 {
+            color: var(--tp-red-color);
+            border: 1px solid var(--tp-red-color);
+
+            &:hover {
+                box-shadow: inherit !important;
+                border-color: var(--tp-red-color) !important;
+                background: var(--tp-rom-color) !important;
+                border-radius: 8px !important;
+            }
+        }
+    }
+}
+
+.my-adds-btn-2,
+.my-adds-btn {
+    @media #{$xs} {
+        width: 72px !important;
+        height: 32px !important;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 10px;
+
+        @media (max-width: 400px) {
+            margin-right: 0;
+        }
+
+        @media (max-width: 360px) {
+            width: 45% !important;
+            margin-left: inherit;
+        }
+    }
+}
+
+.my-adds-btn-2 {
+    @media #{$xs} {
+        margin-right: 0;
+    }
+}
+
+/*----------------------------------------*/
+/*  1.2 Button End
+/*----------------------------------------*/

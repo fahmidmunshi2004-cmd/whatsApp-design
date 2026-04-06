@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market-Place</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+</head>
+
+
+
+<body class="rs-magic-cursor">
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-wrap-heading">
+            <div class="load-text">
+                <span>M</span>
+                <span>A</span>
+                <span>R</span>
+                <span>K</span>
+                <span>E</span>
+                <span>T</span>
+                <span>-</span>
+                <span>P</span>
+                <span>L</span>
+                <span>A</span>
+                <span>C</span>
+                <span>E</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- scrollToTop -->
+    <div class="scrollToTop active-progress">
+        <div class="arrowUp">
+            <i class="fal fa-arrow-up"></i>
+        </div>
+        <div class="water" style="transform: translate(0px, 47%);">
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 560 20" style="display: none;">
+                <symbol id="wave">
+                    <path
+                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
+    <!-- Begin magic cursor -->
+    <div id="magic-cursor" class="cursor-black-bg">
+        <div id="ball"></div>
+    </div>
+    <!-- End magic cursor -->
+
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-area">
+        <div class="tp-offcanvas-wrapper">
+            <div class="tp-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+                <div class="tp-offcanvas-logo">
+                    <a href="javascript:void(0)">
+                        <img src="assets/img/logo/header-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close">
+                    <button>
+                        <i class="fal fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="rs-header-top-right d-flex align-items-center justify-content-end">
+                <a href="javascript:void(0)" class="rs-header-notification d-flex align-items-center">
+                    <i class="rs-header-notification-icon">
+                        <img src="assets/img/icon/bell.svg" alt="">
+                    </i>
+                    <span>Notification</span>
+                    <cite>
+                        2
+                    </cite>
+                </a>
+                <a href="javascript:void(0)" class="rs-header-heart d-flex align-items-center">
+                    <i class="rs-header-heart-icon">
+                        <img src="assets/img/icon/heart.svg" alt="">
+                    </i>
+                    <span>Wishlist</span>
+                    <cite>
+                        2
+                    </cite>
+                </a>
+                <a href="post-ad.html" class="rs-header-btn rs-btn d-flex align-items-center">
+                    Post Your Ad
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M15 7H9V1C9 0.448 8.552 0 8 0C7.448 0 7 0.448 7 1V7H1C0.448 7 0 7.448 0 8C0 8.552 0.448 9 1 9H7V15C7 15.552 7.448 16 8 16C8.552 16 9 15.552 9 15V9H15C15.552 9 16 8.552 16 8C16 7.448 15.552 7 15 7Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+            <div class="tp-offcanvas-menu d-lg-none mb-50">
+                <nav></nav>
+            </div>
+            <div class="tp-offcanvas-content mb-50 d-none d-xl-block">
+                <h2 class="tp-offcanvas-title">
+                    hello-there
+                </h2>
+                <p>
+                    The IT agency industry is evolving at an incredible pace, showing no signs of slowing down.
+                </p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-50 br-10">
+                <a class="popup-image" href="assets/img/hero/hero-06.jpg">
+                    <img src="assets/img/hero/hero-06.jpg" alt="">
+                </a>
+                <a class="popup-image" href="assets/img/hero/hero-07.jpg">
+                    <img src="assets/img/hero/hero-07.jpg" alt="">
+                </a>
+                <a class="popup-image" href="assets/img/hero/hero-03.jpg">
+                    <img src="assets/img/hero/hero-03.jpg" alt="">
+                </a>
+                <a class="popup-image" href="assets/img/hero/hero-04.jpg">
+                    <img src="assets/img/hero/hero-04.jpg" alt="">
+                </a>
+            </div>
+            <div class="tp-offcanvas-info mb-50">
+                <h3 class="tp-offcanvas-info-title mb-15">
+                    information
+                </h3>
+                <span>
+                    <a href="tel:+62427634206">
+                        +624 276 342 06
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:support@gmail.com">
+                        support@gmail.com
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:void(0)">
+                        7240 Wentworth Road Valdosta, GA 31601
+                    </a>
+                </span>
+            </div>
+            <div class="tp-offcanvas-social">
+                <h3 class="tp-offcanvas-social-title mb-15">
+                    follow us
+                </h3>
+                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="tp-offcanvas-overlay"></div>
+    <!-- offcanvas end -->
+
+    <!-- sticky-header-start -->
+    <div class="rs-header-sticky">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-9">
+                    <div class="rs-header-logo">
+                        <a href="javascript:void(0)">
+                            <img src="assets/img/logo/header-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                    <div class="rs-header-main-menu">
+                        <nav class="tp-mobile-menu-active">
+                            <ul class="justify-content-center">
+                                <li>
+                                    <a href="index.html">Home
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+                                            fill="currentColor">
+                                            <path
+                                                d="M5.00002 5.75076C4.80802 5.75076 4.61599 5.67778 4.46999 5.53079L0.469994 1.53079C0.176994 1.23779 0.176994 0.76275 0.469994 0.46975C0.762994 0.17675 1.23803 0.17675 1.53103 0.46975L5.001 3.93972L8.47097 0.46975C8.76397 0.17675 9.23901 0.17675 9.53201 0.46975C9.82501 0.76275 9.82501 1.23779 9.53201 1.53079L5.53201 5.53079C5.38401 5.67778 5.19202 5.75076 5.00002 5.75076Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <div class="tp-megamenu-wrapper-2">
+                                        <div class="row gx-0">
+                                            <div class="tp-megamenu-list tp-megamenu-list-2">
+                                                <ul class="rs-home-menu">
+                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="profile.html">My Profile</a></li>
+                                                    <li><a href="seler-profile.html">Seler-Profile</a>
+                                                    </li>
+                                                    <li><a href="post-ad.html">Post-Ad</a></li>
+                                                    <li><a href="about.html">Our-About</a></li>
+                                                    <li><a href="product-details.html">Product-Details</a>
+                                                    </li>
+                                                    <li><a href="product-list.html">Product-List</a>
+                                                    </li>
+
+                                                    <li><a href="my-product-details.html">My-Product-Details</a>
+                                                    </li>
+                                                    <li><a href="about.html">Our-About</a></li>
+                                                    <li><a href="contact.html">Contact</a></li>
+                                                    <li><a href="log-in.html">Login</a></li>
+                                                    <li><a href="sign-up.html">Sign-Up</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Category
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+                                            fill="currentColor">
+                                            <path
+                                                d="M5.00002 5.75076C4.80802 5.75076 4.61599 5.67778 4.46999 5.53079L0.469994 1.53079C0.176994 1.23779 0.176994 0.76275 0.469994 0.46975C0.762994 0.17675 1.23803 0.17675 1.53103 0.46975L5.001 3.93972L8.47097 0.46975C8.76397 0.17675 9.23901 0.17675 9.53201 0.46975C9.82501 0.76275 9.82501 1.23779 9.53201 1.53079L5.53201 5.53079C5.38401 5.67778 5.19202 5.75076 5.00002 5.75076Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                    <div class="tp-megamenu-wrapper ">
+                                        <div class="row gx-0">
+                                            <div class="tp-megamenu-list">
+                                                <ul>
+                                                    <li class="has-dropdown p-relative"><a
+                                                            href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Modern Agency</a>
+                                                        <ul class="sub-dropdown p-absolute">
+                                                            <li><a href="javascript:void(0)"><img
+                                                                        src="assets/img/cat/cat-04.png" alt=""> Modern
+                                                                    Agency</a></li>
+                                                            <li><a href="javascript:void(0)"><img
+                                                                        src="assets/img/cat/cat-04.png" alt=""> Design
+                                                                    Studio</a></li>
+                                                            <li><a href="javascript:void(0)"><img
+                                                                        src="assets/img/cat/cat-04.png" alt=""> Digital
+                                                                    Marketing</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)"><img
+                                                                        src="assets/img/cat/cat-04.png" alt=""> Creative
+                                                                    Studio</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Digital Marketing</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Architecture Hub</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            AI Image Generator</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Modern Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Digital Marketing</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Architecture Hub</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            AI Image Generator</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Modern Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Digital Marketing</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Architecture Hub</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            AI Image Generator</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Modern Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Digital Marketing</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Studio</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Design Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Creative Agency</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            Architecture Hub</a></li>
+                                                    <li><a href="javascript:void(0)"><img
+                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                            AI Image Generator</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:void(0)">Most Popular</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-8 col-3">
+                    <div class="rs-header-sticky-right d-flex align-items-center justify-content-end">
+                        <a href="post-ad.html"
+                            class="rs-header-btn rs-btn d-flex align-items-center p-0 d-none d-md-flex">
+                            Post Ad
+                        </a>
+                        <div class="rs-header-abtar tp-header-author p-relative d-inline-block">
+                            <img src="assets/img/abter/header-abtar.png" alt="">
+                            <div class="tp-header-author-thumb-more p-absolute">
+                                <a href="sign-in.html">
+                                    <i class="fal fa-sign-in"></i>
+                                    Sign In
+                                </a>
+                                <a href="profile.html">
+                                    <i class="fal fa-user-alt"></i>
+                                    Profile
+                                </a>
+                                <a href="#">
+                                    <i class="fal fa-user-plus"></i>
+                                    Add acount
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <i class="fal fa-sign-in"></i>
+                                    Login
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <i class="fal fa-sign-in"></i>
+                                    User Login
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <i class="fal fa-sign-out"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rs-offcanvas-btn ml-8">
+                            <button class="d-lg-none d-md-block" data-bg-color="#ddd">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M2.94801 5.07455C1.84307 5.08612 0.938738 4.19953 0.927183 3.09559C0.915628 1.99165 1.8012 1.08634 2.90614 1.07477C4.01108 1.0632 4.91541 1.94979 4.92696 3.05373C4.93852 4.15767 4.05295 5.06299 2.94801 5.07455ZM11.9266 2.98046C11.915 1.87652 11.0107 0.989939 9.90576 1.0015C8.80082 1.01307 7.91524 1.91839 7.9268 3.02233C7.93835 4.12627 8.84268 5.01285 9.94762 5.00129C11.0526 4.98972 11.9381 4.0844 11.9266 2.98046ZM18.9262 2.9072C18.9146 1.80326 18.0103 0.916674 16.9054 0.928239C15.8004 0.939805 14.9149 1.84512 14.9264 2.94906C14.938 4.053 15.8423 4.93959 16.9472 4.92802C18.0522 4.91645 18.9378 4.01114 18.9262 2.9072ZM5.00023 10.0533C4.98867 8.9494 4.08435 8.06282 2.97941 8.07439C1.87447 8.08595 0.988893 8.99127 1.00045 10.0952C1.012 11.1991 1.91633 12.0857 3.02127 12.0742C4.12621 12.0626 5.01178 11.1573 5.00023 10.0533ZM11.9998 9.98008C11.9883 8.87614 11.084 7.98956 9.97902 8.00112C8.87408 8.01269 7.98851 8.91801 8.00006 10.0219C8.01162 11.1259 8.91595 12.0125 10.0209 12.0009C11.1258 11.9893 12.0114 11.084 11.9998 9.98008ZM18.9995 9.90681C18.9879 8.80287 18.0836 7.91629 16.9786 7.92786C15.8737 7.93942 14.9881 8.84474 14.9997 9.94868C15.0112 11.0526 15.9156 11.9392 17.0205 11.9276C18.1254 11.9161 19.011 11.0108 18.9995 9.90681ZM5.07349 17.053C5.06194 15.949 4.15761 15.0624 3.05267 15.074C1.94773 15.0856 1.06216 15.9909 1.07371 17.0948C1.08527 18.1988 1.9896 19.0853 3.09454 19.0738C4.19948 19.0622 5.08505 18.1569 5.07349 17.053ZM12.0731 16.9797C12.0616 15.8758 11.1572 14.9892 10.0523 15.0007C8.94735 15.0123 8.06178 15.9176 8.07333 17.0216C8.08489 18.1255 8.98921 19.0121 10.0942 19.0005C11.1991 18.989 12.0847 18.0836 12.0731 16.9797ZM19.0727 16.9064C19.0612 15.8025 18.1568 14.9159 17.0519 14.9275C15.947 14.939 15.0614 15.8444 15.0729 16.9483C15.0845 18.0522 15.9888 18.9388 17.0938 18.9273C18.1987 18.9157 19.0843 18.0104 19.0727 16.9064Z"
+                                        fill="#DD5454"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sticky-header-end -->
+
+    <!-- Template rtl start -->
+    <div class="rs-template-settings">
+        <div class="rs-template-settings-top">
+            <div class="rs-template-settings-icon">
+                <i class="far fa-cog"></i>
+            </div>
+            <h3 class="rs-template-settings-title">
+                Template Settings
+            </h3>
+            <div class="rs-template-settings-button mb-10 d-flex align-items-center justify-content-between">
+                <button class="active"><i class="far fa-moon"></i>Dark</button>
+                <button><i class="far fa-sun"></i>Light</button>
+            </div>
+            <div
+                class="rs-template-settings-button rs-template-settings-button-rtl d-flex align-items-center justify-content-between">
+                <button>Rtl</button>
+                <button class="active">Ltr</button>
+            </div>
+        </div>
+    </div>
+    <!-- Template rtl end -->
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- header start -->
+            <header>
+                <div class="rs-header-area">
+                    <div class="container">
+                        <div class="rs-header-top">
+                            <div class="row align-items-center">
+                                <div class="col-xl-4 col-lg-4 col-md-3 col-9">
+                                    <div class="rs-header-logo">
+                                        <a href="index.html">
+                                            <img src="assets/img/logo/header-logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-9 col-3">
+                                    <div class="rs-header-top-right d-flex align-items-center justify-content-end">
+                                        <a href="javascript:void(0)"
+                                            class="rs-header-notification d-flex align-items-center d-none d-md-block">
+                                            <i class="rs-header-notification-icon">
+                                                <img src="assets/img/icon/bell.svg" alt="">
+                                            </i>
+                                            <span>Notification</span>
+                                            <cite>
+                                                2
+                                            </cite>
+                                        </a>
+                                        <a href="javascript:void(0)"
+                                            class="rs-header-heart d-flex align-items-center d-none d-md-block">
+                                            <i class="rs-header-heart-icon">
+                                                <img src="assets/img/icon/heart.svg" alt="">
+                                            </i>
+                                            <span>Wishlist</span>
+                                            <cite>
+                                                2
+                                            </cite>
+                                        </a>
+                                        <a href="post-ad.html"
+                                            class="rs-header-btn rs-btn d-flex align-items-center d-none d-md-block">
+                                            Post Your Ad
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M15 7H9V1C9 0.448 8.552 0 8 0C7.448 0 7 0.448 7 1V7H1C0.448 7 0 7.448 0 8C0 8.552 0.448 9 1 9H7V15C7 15.552 7.448 16 8 16C8.552 16 9 15.552 9 15V9H15C15.552 9 16 8.552 16 8C16 7.448 15.552 7 15 7Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </a>
+                                        <div class="rs-header-abtar tp-header-author p-relative">
+                                            <img src="assets/img/abter/header-abtar.png" alt="">
+                                            <div class="tp-header-author-thumb-more p-absolute">
+                                                <a href="sign-in.html">
+                                                    <i class="fal fa-sign-in"></i>
+                                                    Sign In
+                                                </a>
+                                                <a href="profile.html">
+                                                    <i class="fal fa-user-alt"></i>
+                                                    Profile
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fal fa-user-plus"></i>
+                                                    Add acount
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fal fa-sign-in"></i>
+                                                    Login
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fal fa-sign-in"></i>
+                                                    User Login
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fal fa-sign-out"></i>
+                                                    Logout
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rs-header-bottom">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xl-6 col-lg-7 col-md-12">
+                                    <div class="rs-header-main-menu d-none d-lg-block">
+                                        <nav class="tp-mobile-menu-active">
+                                            <ul>
+                                                <li>
+                                                    <a href="index.html">Home
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                                                            viewBox="0 0 10 6" fill="currentColor">
+                                                            <path
+                                                                d="M5.00002 5.75076C4.80802 5.75076 4.61599 5.67778 4.46999 5.53079L0.469994 1.53079C0.176994 1.23779 0.176994 0.76275 0.469994 0.46975C0.762994 0.17675 1.23803 0.17675 1.53103 0.46975L5.001 3.93972L8.47097 0.46975C8.76397 0.17675 9.23901 0.17675 9.53201 0.46975C9.82501 0.76275 9.82501 1.23779 9.53201 1.53079L5.53201 5.53079C5.38401 5.67778 5.19202 5.75076 5.00002 5.75076Z"
+                                                                fill="currentColor" />
+                                                        </svg>
+                                                    </a>
+                                                    <div class="tp-megamenu-wrapper-2">
+                                                        <div class="row gx-0">
+                                                            <div class="tp-megamenu-list tp-megamenu-list-2">
+                                                                <ul class="rs-home-menu">
+                                                                    <li><a href="index.html">Home</a></li>
+                                                                    <li><a href="profile.html">My Profile</a></li>
+                                                                    <li><a href="seler-profile.html">Seler-Profile</a>
+                                                                    </li>
+                                                                    <li><a href="post-ad.html">Post-Ad</a></li>
+                                                                    <li><a href="about.html">Our-About</a></li>
+                                                                    <li><a
+                                                                            href="product-details.html">Product-Details</a>
+                                                                    </li>
+                                                                    <li><a href="product-list.html">Product-List</a>
+                                                                    </li>
+
+                                                                    <li><a
+                                                                            href="my-product-details.html">My-Product-Details</a>
+                                                                    </li>
+                                                                    <li><a href="about.html">Our-About</a></li>
+                                                                    <li><a href="contact.html">Contact</a></li>
+                                                                    <li><a href="log-in.html">Login</a></li>
+                                                                    <li><a href="sign-up.html">Sign-Up</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Category
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                                                            viewBox="0 0 10 6" fill="currentColor">
+                                                            <path
+                                                                d="M5.00002 5.75076C4.80802 5.75076 4.61599 5.67778 4.46999 5.53079L0.469994 1.53079C0.176994 1.23779 0.176994 0.76275 0.469994 0.46975C0.762994 0.17675 1.23803 0.17675 1.53103 0.46975L5.001 3.93972L8.47097 0.46975C8.76397 0.17675 9.23901 0.17675 9.53201 0.46975C9.82501 0.76275 9.82501 1.23779 9.53201 1.53079L5.53201 5.53079C5.38401 5.67778 5.19202 5.75076 5.00002 5.75076Z"
+                                                                fill="currentColor" />
+                                                        </svg>
+                                                    </a>
+                                                    <div class="tp-megamenu-wrapper ">
+                                                        <div class="row gx-0">
+                                                            <div class="tp-megamenu-list">
+                                                                <ul>
+                                                                    <li class="has-dropdown p-relative"><a
+                                                                            href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a>
+                                                                        <ul class="sub-dropdown p-absolute">
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Modern Agency</a></li>
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Design Studio</a></li>
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Digital Marketing</a>
+                                                                            </li>
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Creative Studio</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><a href="javascript:void(0)">Most Popular</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 col-md-12">
+                                    <div class="rs-header-form">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Product Hare.">
+                                            <a href="javascript:void(0)">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M22 22L20 20" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </form>
+                                        <div class="rs-offcanvas-btn">
+                                            <button class="d-lg-none d-md-block">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M2.94801 5.07455C1.84307 5.08612 0.938738 4.19953 0.927183 3.09559C0.915628 1.99165 1.8012 1.08634 2.90614 1.07477C4.01108 1.0632 4.91541 1.94979 4.92696 3.05373C4.93852 4.15767 4.05295 5.06299 2.94801 5.07455ZM11.9266 2.98046C11.915 1.87652 11.0107 0.989939 9.90576 1.0015C8.80082 1.01307 7.91524 1.91839 7.9268 3.02233C7.93835 4.12627 8.84268 5.01285 9.94762 5.00129C11.0526 4.98972 11.9381 4.0844 11.9266 2.98046ZM18.9262 2.9072C18.9146 1.80326 18.0103 0.916674 16.9054 0.928239C15.8004 0.939805 14.9149 1.84512 14.9264 2.94906C14.938 4.053 15.8423 4.93959 16.9472 4.92802C18.0522 4.91645 18.9378 4.01114 18.9262 2.9072ZM5.00023 10.0533C4.98867 8.9494 4.08435 8.06282 2.97941 8.07439C1.87447 8.08595 0.988893 8.99127 1.00045 10.0952C1.012 11.1991 1.91633 12.0857 3.02127 12.0742C4.12621 12.0626 5.01178 11.1573 5.00023 10.0533ZM11.9998 9.98008C11.9883 8.87614 11.084 7.98956 9.97902 8.00112C8.87408 8.01269 7.98851 8.91801 8.00006 10.0219C8.01162 11.1259 8.91595 12.0125 10.0209 12.0009C11.1258 11.9893 12.0114 11.084 11.9998 9.98008ZM18.9995 9.90681C18.9879 8.80287 18.0836 7.91629 16.9786 7.92786C15.8737 7.93942 14.9881 8.84474 14.9997 9.94868C15.0112 11.0526 15.9156 11.9392 17.0205 11.9276C18.1254 11.9161 19.011 11.0108 18.9995 9.90681ZM5.07349 17.053C5.06194 15.949 4.15761 15.0624 3.05267 15.074C1.94773 15.0856 1.06216 15.9909 1.07371 17.0948C1.08527 18.1988 1.9896 19.0853 3.09454 19.0738C4.19948 19.0622 5.08505 18.1569 5.07349 17.053ZM12.0731 16.9797C12.0616 15.8758 11.1572 14.9892 10.0523 15.0007C8.94735 15.0123 8.06178 15.9176 8.07333 17.0216C8.08489 18.1255 8.98921 19.0121 10.0942 19.0005C11.1991 18.989 12.0847 18.0836 12.0731 16.9797ZM19.0727 16.9064C19.0612 15.8025 18.1568 14.9159 17.0519 14.9275C15.947 14.939 15.0614 15.8444 15.0729 16.9483C15.0845 18.0522 15.9888 18.9388 17.0938 18.9273C18.1987 18.9157 19.0843 18.0104 19.0727 16.9064Z"
+                                                        fill="#DD5454" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header end -->
+
+            <main>
+                <section class="rs-about-area">
+                    <div class="container">
+                        <div class="rs-about-top-content br-4 pt-24 pb-24 pl-16 pr-16 mt-40" data-bg-color="#F6F7F9">
+                            <div class="rs-section-title-wrapper mb-24 text-center">
+                                <h1 class="rs-section-title mb-6 fns-32 mb-8" data-color="#DD5454">
+                                    About Us
+                                </h1>
+                                <span class="rs-section-sub-title fnw-600 fns-40 mb-12" data-color="#17181D">
+                                    Empowering People to Buy & Sell Smarter
+                                </span>
+                                <p class="fns-20" data-color="#17181D">
+                                    We’re more than just a marketplace — we’re a movement to make local buying and
+                                    selling easier, faster, and more human. Our platform connects everyday people to
+                                    trade used products safely, without fees or middlemen.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-6 col-6">
+                                <div class="rs-about-img">
+                                    <img src="assets/img/about/about-01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                <div class="rs-about-img">
+                                    <img src="assets/img/about/about-02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="rs-about-content rs-about-content-1 mb-24">
+                                <h2 class="rs-about-title">
+                                    Simple & Fast Listings
+                                </h2>
+                                <p class="rs-about-text">
+                                    Post your ad in seconds with just a photo and a few details — no complicated steps
+                                    or sign-up traps. Image Idea: A person tapping their phone with an item ready to
+                                    sell (like a pair of shoes or phone)Post your ad in seconds with just a photo and a
+                                    few details — no complicated steps or sign-up traps. Image Idea: A person tapping
+                                    their phone with an item ready to sell (like a pair of shoes or phone)Post your ad
+                                    in seconds with just a photo and a few details — no complicated steps or sign-up
+                                    traps. Image Idea: A person tapping their phone with an item ready to sell (like a
+                                    pair of shoes or phone)
+                                </p>
+                            </div>
+                            <div class="rs-about-content mb-24">
+                                <h2 class="rs-about-title">
+                                    Community-Driven Trust
+                                </h2>
+                                <p class="rs-about-text">
+                                    Post your ad in seconds with just a photo and a few details — no complicated steps
+                                    or sign-up traps. Image Idea: A person tapping their phone with an item ready to
+                                    sell (like a pair of shoes or phone)Post your ad in seconds with just a photo and a
+                                    few details — no complicated steps or sign-up traps. Image Idea: A person tapping
+                                    their phone with an item ready to sell (like a pair of shoes or phone)Post your ad
+                                    in seconds with just a photo and a few details — no complicated steps or sign-up
+                                    traps. Image Idea: A person tapping their phone with an item ready to sell (like a
+                                    pair of shoes or phone)
+                                </p>
+                            </div>
+                            <div class="rs-about-content">
+                                <h2 class="rs-about-title">
+                                    Community-Driven Trust
+                                </h2>
+                                <p class="rs-about-text">
+                                    Post your ad in seconds with just a photo and a few details — no complicated steps
+                                    or sign-up traps. Image Idea: A person tapping their phone with an item ready to
+                                    sell (like a pair of shoes or phone)Post your ad in seconds with just a photo and a
+                                    few details — no complicated steps or sign-up traps. Image Idea: A person tapping
+                                    their phone with an item ready to sell (like a pair of shoes or phone)Post your ad
+                                    in seconds with just a photo and a few details — no complicated steps or sign-up
+                                    traps. Image Idea: A person tapping their phone with an item ready to sell (like a
+                                    pair of shoes or phone)
+                                </p>
+                            </div>
+                            <div class="rs-about-bottom-content mt-40 mb-60">
+                                <div class="row">
+                                    <div class="col-xl-5 col-lg-5 col-md-6">
+                                        <img class="br-4 rs-about-bottom-img" src="assets/img/about/about-03.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-xl-7 col-lg-7 col-md-6">
+                                        <div class="rs-about-content h-100 d-flex flex-column justify-content-center">
+                                            <h2 class="rs-about-title fns-40">
+                                                Secure & Friendly <br> Experience
+                                            </h2>
+                                            <p class="rs-about-text rs-about-text-last">
+                                                Integrated chat, verified profiles, and a dedicated support team keep
+                                                your selling experience safe and smooth.<br class="d-lg-none">Image
+                                                Idea: Smartphone screen
+                                                showing a chat between buyer and seller with a friendly tone
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- contact info start -->
+                <section class="rs-contact-info-area pt-48 pb-48 mb-100" data-bg-color="#17181D">
+                    <div class="container">
+                        <div class="row">
+                            <div class="rs-contact-info-content">
+                                <h3 class="rs-contact-info-title mb-24 text-center">
+                                    We're here to help!
+                                </h3>
+                                <div class="rs-contact-form-contact">
+                                    <a href="mailto:support@razinsoft.com" class="d-flex align-items-center gap-8">
+                                        <span class="rs-contact-form-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="23"
+                                                viewBox="0 0 26 23" fill="none">
+                                                <path
+                                                    d="M21 22.666H5C1.776 22.666 0 20.89 0 17.666V5.66602C0 2.44202 1.776 0.666016 5 0.666016H21C24.224 0.666016 26 2.44202 26 5.66602V17.666C26 20.89 24.224 22.666 21 22.666ZM5 2.66602C2.89733 2.66602 2 3.56335 2 5.66602V17.666C2 19.7687 2.89733 20.666 5 20.666H21C23.1027 20.666 24 19.7687 24 17.666V5.66602C24 3.56335 23.1027 2.66602 21 2.66602H5ZM14.3721 12.5714L20.9212 7.80868C21.3679 7.48468 21.4666 6.85802 21.1413 6.41136C20.8173 5.96602 20.1935 5.86468 19.7441 6.19135L13.1947 10.954C13.0773 11.0394 12.9214 11.0394 12.804 10.954L6.25456 6.19135C5.80389 5.86468 5.18142 5.96736 4.85742 6.41136C4.53209 6.85802 4.63081 7.48334 5.07747 7.80868L11.6266 12.5727C12.0373 12.8713 12.5187 13.0193 12.9987 13.0193C13.4787 13.0193 13.9627 12.87 14.3721 12.5714Z"
+                                                    fill="#DD5454" />
+                                            </svg>
+                                        </span>
+                                        support@razinsoft.com
+                                    </a>
+                                    <a href="tel:+01963953998" class="d-flex align-items-center gap-8">
+                                        <span class="rs-contact-form-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none">
+                                                <path
+                                                    d="M19.0678 26.0032C18.4558 26.0032 17.8399 25.9205 17.2319 25.7539C9.01185 23.4979 2.50383 16.9939 0.246499 8.77922C-0.266835 6.91122 0.0144285 4.96454 1.0411 3.30054C2.07176 1.62854 3.76651 0.448538 5.69051 0.0645379C6.97051 -0.191462 8.23584 0.379214 8.88517 1.47388L10.9692 4.99386C11.9812 6.70319 11.4783 8.90453 9.82365 10.0059L8.31583 11.0085C9.72517 13.9019 12.0956 16.2792 14.977 17.6872L15.9932 16.1712C17.1012 14.5192 19.3025 14.0245 21.0105 15.0419L24.5346 17.1432C25.6253 17.7939 26.1892 19.0672 25.9412 20.3099C25.5572 22.2339 24.3771 23.9285 22.7065 24.9592C21.5838 25.6499 20.3345 26.0032 19.0678 26.0032ZM6.30249 2.00053C6.23716 2.00053 6.17052 2.00722 6.10652 2.02055C4.70119 2.30189 3.48386 3.14852 2.7452 4.34986C2.0132 5.53652 1.81183 6.92187 2.17716 8.24854C4.24783 15.7859 10.2198 21.7552 17.7611 23.8245C19.0891 24.1885 20.4703 23.9859 21.6557 23.2552C22.8557 22.5152 23.7039 21.2965 23.9799 19.9152C24.0626 19.5005 23.8745 19.0752 23.5092 18.8579L19.9864 16.7565C19.1931 16.2845 18.169 16.5152 17.6544 17.2819L16.1677 19.5019C15.9011 19.8992 15.3866 20.0512 14.9519 19.8672C11.0012 18.2152 7.78655 14.9939 6.13322 11.0285C5.94922 10.5859 6.10369 10.0765 6.50236 9.8112L8.7172 8.33785C9.4852 7.82719 9.71847 6.80453 9.2478 6.01119L7.16382 2.49252C6.98115 2.18318 6.65049 2.00053 6.30249 2.00053Z"
+                                                    fill="#DD5454" />
+                                            </svg>
+                                        </span>
+                                        01963953998
+                                    </a>
+                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-8">
+                                        <span class="rs-contact-form-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26"
+                                                viewBox="0 0 24 26" fill="none">
+                                                <path
+                                                    d="M11.9987 0C5.56536 0 0.332031 5.23333 0.332031 11.6667C0.332031 18.4907 6.59469 22.6266 10.7387 25.3639L11.444 25.832C11.612 25.944 11.8054 26 11.9987 26C12.192 26 12.3854 25.944 12.5534 25.832L13.2587 25.3639C17.4027 22.6266 23.6654 18.4907 23.6654 11.6667C23.6654 5.23333 18.432 0 11.9987 0ZM12.1574 23.6947L11.9987 23.8001L11.84 23.6947C7.82669 21.044 2.33203 17.4147 2.33203 11.6667C2.33203 6.336 6.66803 2 11.9987 2C17.3294 2 21.6654 6.336 21.6654 11.6667C21.6654 17.4147 16.1694 21.0453 12.1574 23.6947ZM11.9987 7.33333C9.60936 7.33333 7.66536 9.27733 7.66536 11.6667C7.66536 14.056 9.60936 16 11.9987 16C14.388 16 16.332 14.056 16.332 11.6667C16.332 9.27733 14.388 7.33333 11.9987 7.33333ZM11.9987 14C10.712 14 9.66536 12.9533 9.66536 11.6667C9.66536 10.38 10.712 9.33333 11.9987 9.33333C13.2854 9.33333 14.332 10.38 14.332 11.6667C14.332 12.9533 13.2854 14 11.9987 14Z"
+                                                    fill="#DD5454" />
+                                            </svg>
+                                        </span>
+                                        Dhaka, Bangladesh
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- contact info end -->
+            </main>
+
+            <!-- footer start -->
+            <footer class="rs-footer-area" data-bg-color="#17181D">
+                <div class="container">
+                    <div class="rs-footer-top pb-24 mb-24">
+                        <div class="row align-items-center">
+                            <div class="col-xl-8 col-lg-8 col-md-5 col-12">
+                                <div class="rs-footer-logo">
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/img/logo/footer-logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-7 col-12">
+                                <div class="rs-footer-top-right">
+                                    <div
+                                        class="rs-footer-social d-flex align-items-center gap-16 justify-content-end mb-24">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/facebook.svg" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/twitter.svg" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/instagram.svg" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/you-tube.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="rs-footer-download-app d-flex align-items-center justify-content-end gap-15">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/download-play-store.png" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/download-apple.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="rs-footer-widget">
+                                <div class="rs-footer-widget-content">
+                                    <h3 class="rs-footer-widget-title">
+                                        Quick link
+                                    </h3>
+                                    <div class="rs-footer-widget-menu">
+                                        <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="javascript:void(0)">Most Popular</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="rs-footer-widget rs-footer-widget-2">
+                                <div class="rs-footer-widget-content">
+                                    <h3 class="rs-footer-widget-title">
+                                        Others Link
+                                    </h3>
+                                    <div class="rs-footer-widget-menu">
+                                        <ul>
+                                            <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                                            <li><a href="javascript:void(0)">Terms of Use</a></li>
+                                            <li><a href="javascript:void(0)">Legal</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="rs-footer-widget rs-footer-widget-3">
+                                <div class="rs-footer-widget-content">
+                                    <h3 class="rs-footer-widget-title">
+                                        Contact
+                                    </h3>
+                                    <div class="rs-footer-contact">
+                                        <a href="mailto:support@razinsoft.com" class="d-flex align-items-center gap-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                viewBox="0 0 25 24" fill="none">
+                                                <path
+                                                    d="M18.3335 20.75H6.3335C3.9155 20.75 2.5835 19.418 2.5835 17V8C2.5835 5.582 3.9155 4.25 6.3335 4.25H18.3335C20.7515 4.25 22.0835 5.582 22.0835 8V17C22.0835 19.418 20.7515 20.75 18.3335 20.75ZM6.3335 5.75C4.7565 5.75 4.0835 6.423 4.0835 8V17C4.0835 18.577 4.7565 19.25 6.3335 19.25H18.3335C19.9105 19.25 20.5835 18.577 20.5835 17V8C20.5835 6.423 19.9105 5.75 18.3335 5.75H6.3335ZM13.3625 13.179L18.2744 9.60699C18.6094 9.36399 18.6835 8.89401 18.4395 8.55901C18.1965 8.22501 17.7286 8.149 17.3916 8.394L12.4795 11.966C12.3915 12.03 12.2745 12.03 12.1865 11.966L7.27441 8.394C6.93641 8.149 6.46956 8.22601 6.22656 8.55901C5.98256 8.89401 6.0566 9.36299 6.3916 9.60699L11.3035 13.18C11.6115 13.404 11.9725 13.515 12.3325 13.515C12.6925 13.515 13.0555 13.403 13.3625 13.179Z"
+                                                    fill="white" />
+                                            </svg>
+                                            support@razinsoft.com
+                                        </a>
+                                        <a href="tel:+01963953998" class="d-flex align-items-center gap-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                viewBox="0 0 25 24" fill="none">
+                                                <path
+                                                    d="M16.8856 21.7534C16.4266 21.7534 15.9646 21.6914 15.5086 21.5664C9.3436 19.8744 4.46259 14.9964 2.76959 8.83539C2.38459 7.43439 2.59554 5.97438 3.36554 4.72638C4.13854 3.47238 5.4096 2.58738 6.8526 2.29938C7.8126 2.10738 8.76159 2.53539 9.24859 3.35639L10.8116 5.99637C11.5706 7.27837 11.1935 8.92937 9.95245 9.75537L8.82159 10.5074C9.87859 12.6774 11.6564 14.4604 13.8174 15.5164L14.5796 14.3794C15.4106 13.1404 17.0616 12.7694 18.3426 13.5324L20.9857 15.1084C21.8037 15.5964 22.2266 16.5514 22.0406 17.4834C21.7526 18.9264 20.8676 20.1974 19.6146 20.9704C18.7726 21.4884 17.8356 21.7534 16.8856 21.7534ZM7.31158 3.75138C7.26258 3.75138 7.21261 3.75639 7.16461 3.76639C6.11061 3.97739 5.19761 4.61237 4.64361 5.51337C4.09461 6.40337 3.94359 7.44238 4.21759 8.43738C5.77059 14.0904 10.2496 18.5674 15.9056 20.1194C16.9016 20.3924 17.9375 20.2404 18.8265 19.6924C19.7265 19.1374 20.3626 18.2234 20.5696 17.1874C20.6316 16.8764 20.4906 16.5574 20.2166 16.3944L17.5745 14.8184C16.9795 14.4644 16.2115 14.6374 15.8255 15.2124L14.7105 16.8774C14.5105 17.1754 14.1246 17.2894 13.7986 17.1514C10.8356 15.9124 8.42463 13.4964 7.18463 10.5224C7.04663 10.1904 7.16249 9.80838 7.46149 9.60938L9.12262 8.50437C9.69862 8.12137 9.87357 7.35437 9.52057 6.75937L7.95758 4.12036C7.82058 3.88836 7.57258 3.75138 7.31158 3.75138Z"
+                                                    fill="white" />
+                                            </svg>
+                                            01963953998
+                                        </a>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                viewBox="0 0 25 24" fill="none">
+                                                <path
+                                                    d="M12.3335 2.25C7.5085 2.25 3.5835 6.175 3.5835 11C3.5835 16.118 8.28049 19.2199 11.3885 21.2729L11.9175 21.624C12.0435 21.708 12.1885 21.75 12.3335 21.75C12.4785 21.75 12.6235 21.708 12.7495 21.624L13.2785 21.2729C16.3865 19.2199 21.0835 16.118 21.0835 11C21.0835 6.175 17.1585 2.25 12.3335 2.25ZM12.4525 20.021L12.3335 20.1001L12.2145 20.021C9.20449 18.033 5.0835 15.311 5.0835 11C5.0835 7.002 8.3355 3.75 12.3335 3.75C16.3315 3.75 19.5835 7.002 19.5835 11C19.5835 15.311 15.4615 18.034 12.4525 20.021ZM12.3335 7.75C10.5415 7.75 9.0835 9.208 9.0835 11C9.0835 12.792 10.5415 14.25 12.3335 14.25C14.1255 14.25 15.5835 12.792 15.5835 11C15.5835 9.208 14.1255 7.75 12.3335 7.75ZM12.3335 12.75C11.3685 12.75 10.5835 11.965 10.5835 11C10.5835 10.035 11.3685 9.25 12.3335 9.25C13.2985 9.25 14.0835 10.035 14.0835 11C14.0835 11.965 13.2985 12.75 12.3335 12.75Z"
+                                                    fill="white" />
+                                            </svg>
+                                            44 Danwers, NY City, USA, 70-102
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rs-footer-copyright-area text-center">
+                            <div class="rs-footer-copyright-text">
+                                <p>© 2025 All right reserved by &nbsp;
+                                    <a href="javascript:void(0)"> RazinSoft</a>
+                                </p>
+                                <div class="rs-footer-copyright-border p-relative"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end -->
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/tp-cursor.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

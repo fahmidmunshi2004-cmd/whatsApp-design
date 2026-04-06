@@ -1,0 +1,359 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  1.6 Offcanvas Start
+/*----------------------------------------*/
+
+.rs-offcanvas {
+    &-btn {
+        @media #{$xs} {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+
+        & button {
+            border-radius: 8px;
+            background: var(--Roman-50, #FDF3F3);
+            width: 40px;
+            height: 40px;
+            border: none;
+        }
+    }
+}
+
+
+.tp-offcanvas {
+    &-menu {
+        & .tp-megamenu-wrapper {
+            & .tp-sidemenu-close {
+                top: 15px;
+            }
+
+            &-2 {
+                & .tp-sidemenu-close {
+                    top: 15px;
+                }
+            }
+        }
+
+        & svg {
+            display: none;
+        }
+    }
+
+    &-logo {
+        width: 190px;
+    }
+
+    &-header {
+        margin-bottom: 60px;
+
+        @media #{$xs} {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-area {
+        position: fixed;
+        z-index: 111;
+        width: 450px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: var(--tp-rom-color);
+        padding: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.45s ease-in-out;
+        transform: translatex(100%);
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45);
+
+        @media #{$md} {
+            width: 350px;
+        }
+
+        @media #{$xs} {
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        @media #{$sm} {
+            width: 60%;
+            padding: 40px 20px;
+        }
+
+        &-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translatex(0%);
+        }
+
+        & .rs-header-top-right {
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center !important;
+            background: var(--tp-white-color);
+            box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.16);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+
+            & a {
+                flex: 0 0 48%;
+                margin-right: 0;
+                justify-content: center;
+
+                &:last-child {
+                    flex: 0 0 100%;
+                }
+
+                @media (max-width: 325px) {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+
+    &-close {
+        background: var(--tp-grey-color-5);
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        text-align: center;
+        @include transition(.4s);
+
+        & button {
+            & i {
+                @include transition(.3s linear);
+                color: var(--tp-red-color);
+                font-size: 19px;
+
+                &:hover {
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+
+        @media #{$xs} {
+            margin-top: 10px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 30px;
+        }
+    }
+
+    &-content {
+        & p {
+            color: #404042;
+        }
+    }
+
+    &-title {
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    &-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    &-info {
+        &-title {
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 700;
+
+            @media #{$xs} {
+                font-size: 25px;
+            }
+        }
+
+        & span {
+            display: block;
+            margin-bottom: 5px;
+
+            & a {
+                color: #404042;
+            }
+        }
+    }
+
+    &-social {
+        &-title {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        & a {
+            & svg {
+                font-size: 14px;
+            }
+
+            border: 1px solid var(--tp-heading-color);
+            border-radius: 40px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            @include transition(.5s);
+
+            &:hover {
+                background-color: var(--tp-red-color);
+                color: #fff;
+                border-color: transparent;
+            }
+        }
+    }
+
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        backdrop-filter: blur(1px);
+        transition: 0.45s ease-in-out;
+        background: rgba(24, 24, 24, .44);
+        cursor: url("data:image/svg+xml;utf8,\
+            <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>\
+            <g transform='rotate(45 16 16)'>\
+                <circle cx='16' cy='16' r='1.5' fill='white' stroke='black' stroke-width='0.5'/>\
+                <line x1='16' y1='0' x2='16' y2='32' stroke='white' stroke-width='2' stroke-linecap='round'/>\
+                <line x1='0' y1='16' x2='32' y2='16' stroke='white' stroke-width='2' stroke-linecap='round'/>\
+                <line x1='16' y1='0' x2='16' y2='32' stroke='white' stroke-width='0.5' stroke-linecap='round'/>\
+                <line x1='0' y1='16' x2='32' y2='16' stroke='white' stroke-width='0.5' stroke-linecap='round'/>\
+            </g>\
+            </svg>") 16 16, crosshair;
+
+        &-open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &-toggle {
+        color: #000;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        display: block;
+        line-height: 55px;
+        text-align: center;
+        border-radius: 10px;
+        @include transition(.3s linear);
+
+        &:hover {
+            background: var(--tp-theme-color-2);
+            border-radius: 10px;
+
+            & i {
+                color: var(--tp-heading-color);
+            }
+        }
+
+        & i {
+            font-size: 25px;
+            @include transition(.3s linear);
+        }
+
+        &-1 {
+            background-color: #23252D;
+            border-radius: 0;
+            height: 100px;
+            width: 100px;
+            line-height: 117px;
+            @include transition(.3s linear);
+
+            &:hover {
+                background: var(--tp-theme-color-2);
+                border-radius: 2px;
+
+                & i {
+                    color: var(--tp-heading-color);
+                }
+            }
+
+            & i {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+
+
+.reverse-md-column {
+    @media #{$md,$xs} {
+        flex-direction: column-reverse;
+    }
+}
+
+.tp-sidemenu-close {
+    @include transition(.3s linear);
+    border-radius: 5px;
+
+    & i {
+        @include transition(.3s linear);
+    }
+
+    &.active {
+        background: var(--tp-red-color);
+        border-color: transparent;
+        border-radius: 5px;
+
+        & i {
+            color: var(--tp-white-color);
+        }
+    }
+}
+
+
+
+.rs-profile-offcanvas {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 350px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    transition: all 0.4s ease;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+
+    &.rs-profile-offcanvas-open {
+        left: 0;
+    }
+
+    @media(max-width: 400px) {
+        width: 100%;
+    }
+
+    @media #{$sm} {
+        width: 350px;
+    }
+}
+
+.rs-profile-offcanvas.active {
+    left: 0;
+}
+
+/*----------------------------------------*/
+/*  1.6 Offcanvas End
+/*----------------------------------------*/
