@@ -650,3 +650,10 @@ body.dark-mode .send-message-area textarea {
 body.dark-mode .message-tab-btn ul li a {
   color: #fcfdff;
 }
+
+body.dark-mode .rs-product-make-offer input,
+body.dark-mode .sand-message input,
+body.dark-mode .rs-chat-input {
+  background: #464b56;
+  border: 1px solid #62666d;
+}
