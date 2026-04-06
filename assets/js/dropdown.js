@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // rep text //
-document.querySelectorAll('.msg-reply').forEach(el => {
+document.querySelectorAll('.msg-cut').forEach(el => {
     let text = el.innerText.trim();
     text = text.replace(/\n/g, "<br>");
     el.innerHTML = text;

@@ -14851,7 +14851,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
   background: var(--tp-rom-color);
   position: fixed;
   padding: 14px 24px;
-  z-index: 99;
+  z-index: 200;
   border-radius: 0 0 0 8px;
   right: 0;
   top: 30%;
