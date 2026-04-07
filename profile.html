@@ -619,6 +619,7 @@
                                 </div>
                                 <div class="rs-chat-wrapper rs-chat-wrapper-2 d-flex">
                                     <!-- LEFT USER LIST -->
+
                                     <div class="rs-chat-custom-col rs-chat-custom-2">
                                         <h3 class="rs-chat-user-list-title rs-chat-user-list-title-2">
                                             User List
@@ -776,6 +777,30 @@
                                     <div class="rs-massage-right-area rs-massage-right-area-2"
                                         data-bg-img="assets/img/bg/whatsapp-bg.jpg">
                                         <form action="#" class="rs-massage-form-2">
+
+                                            <div
+                                                class="chat-empty-state d-flex flex-column align-items-center justify-content-center text-center">
+
+                                                <!-- Illustration (SVG) -->
+                                                <div class="empty-illustration mb-4">
+                                                    <svg width="180" height="180" viewBox="0 0 200 200" fill="none">
+                                                        <circle cx="100" cy="100" r="90" fill="#EAF7EE" />
+                                                        <path
+                                                            d="M60 120C60 100 80 85 100 85C120 85 140 100 140 120V140H60V120Z"
+                                                            fill="#20B85A" />
+                                                        <circle cx="100" cy="75" r="20" fill="#20B85A" />
+                                                        <path d="M50 150C60 130 140 130 150 150" stroke="#20B85A"
+                                                            stroke-width="4" stroke-linecap="round" />
+                                                    </svg>
+                                                </div>
+
+                                                <!-- Text -->
+                                                <h4 class="mb-2 fw-bold">No conversation selected</h4>
+                                                <p class="text-muted mb-0">
+                                                    Select a user from the left sidebar to start messaging
+                                                </p>
+
+                                            </div>
                                             <header class="d-flex align-items-center justify-content-between">
                                                 <div class="rs-massage-form-2-left d-flex align-items-center gap-2">
                                                     <button class="chat-back-btn d-md-none"><i
@@ -849,8 +874,6 @@
                                                     </div>
                                                 </div>
                                             </header>
-
-
 
                                             <div class="messages-container">
                                                 <ol class="messages">
