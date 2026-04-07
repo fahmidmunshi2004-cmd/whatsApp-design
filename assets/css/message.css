@@ -544,18 +544,6 @@
 }
 
 
-.msg-product-content {
-  background-position: center;
-  background-attachment: fixed;
-  background-size: contain;
-  position: sticky !important;
-  top: 79px;
-  z-index: 99 !important;
-  background-image: url(../img/bg/whatsapp-bg.jpg);
-  margin: 0 !important;
-  padding: 8px 24px;
-}
-
 
 @media (max-width: 1200px) {
   .msg-video-container video {
@@ -576,9 +564,6 @@
     padding: 0
   }
 
-  .msg-product-content {
-    padding: 8px;
-  }
 }
 
 /* dark mode */
@@ -606,7 +591,6 @@ body.dark-mode .rs-massage-right-area.rs-massage-right-area-2 {
   background-attachment: fixed !important;
 }
 
-body.dark-mode .msg-product-content,
 body.dark-mode .send-message-area {
   background-position: center;
   background-attachment: fixed;

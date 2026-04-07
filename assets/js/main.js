@@ -1513,18 +1513,25 @@
     });
 
     // Optionally
-    const backBtn = document.createElement('button');
-    backBtn.innerHTML = '<i class="fal fa-arrow-left"></i>';
-    backBtn.classList.add('chat-back-btn', 'd-md-none');
+    // Message-mobile
+    const backBtn = document.querySelector('.chat-back-btn');
 
-    const target = document.querySelector('.rs-massage-right-area ul li a');
-    if (target) {
-        target.prepend(backBtn);
+    // Open chat (mobile)
+    userList.forEach(user => {
+        user.addEventListener('click', () => {
+            if (window.innerWidth <= 767) {
+                chatWrapper.classList.add('chat-open');
+            }
+        });
+    });
 
+    // Back button
+    if (backBtn) {
         backBtn.addEventListener('click', () => {
             chatWrapper.classList.remove('chat-open');
         });
     }
+
 
 
 
