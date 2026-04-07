@@ -643,6 +643,11 @@ body.dark-mode .rs-chat-input {
 }
 
 
+body.dark-mode .rs-chat-users li.active {
+  background: var(--tp-heading-color) !important;
+}
+
+
 /* chat-empty page css*/
 .chat-empty-state {
   height: 100%;
@@ -729,4 +734,45 @@ body.dark-mode .rs-chat-input {
     font-size: 12px;
     max-width: 260px;
   }
+}
+
+
+
+.chat-empty-state {
+  background: #ffffff;
+}
+
+body.dark-mode .chat-empty-state {
+  background: #24262D;
+  color: #e5e7eb;
+}
+
+body.dark-mode .chat-empty-state h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .chat-empty-state p {
+  color: #a1a1aa !important;
+}
+
+/* illustration color tweak */
+body.dark-mode .empty-illustration svg circle {
+  fill: #000000;
+}
+
+body.dark-mode .empty-illustration svg circle.circle {
+  fill: #ffffff;
+}
+
+body.dark-mode .empty-illustration svg path {
+  fill: #ffffff;
+}
+
+body.dark-mode .empty-illustration svg path[stroke] {
+  stroke: #ffffff;
+}
+
+/* optional subtle card feel */
+body.dark-mode .chat-empty-state {
+  border-radius: 12px;
 }
