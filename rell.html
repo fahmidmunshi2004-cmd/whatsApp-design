@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;overscroll-behavior: none;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Profile</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/message.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/rell.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+</head>
+
+
+<body class="rs-magic-cursor">
+
+    <!-- rell__uplode -->
+    <section id="rell__uplode" class="modal_container">
+        <!-- modal content -->
+        <div class="modal_content br-upload-modal">
+            <form action="#">
+                <div class="br-modal-header">
+                    <h4 class="m-0">Upload a Reel</h4>
+                    <button type="button" onclick="toggleModal('rell__uplode')" class="close-icon">
+                        <i class="fal fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="br-modal-body">
+                    <label class="br-upload-zone mb-3">
+                        <input type="file" hidden accept="video/mp4,video/webm">
+                        <div class="text-center">
+                            <i class="fal fa-upload upload-main-icon"></i>
+                            <p class="mb-1 mt-2 fw-semibold uplode-video-title">Choose your file or drag and drop your
+                                video here</p>
+                            <small class="text-muted">Maximum 50MB and 30s in MP4, WebM format</small>
+                            <div class="mt-3">
+                                <span class="btn-choose">Choose File</span>
+                            </div>
+                        </div>
+                    </label>
+
+                    <div class="br-file-card mb-3">
+                        <div class="d-flex align-items-center">
+                            <video class="short-video" width="100%" height="400px" controls>
+                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                            </video>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0 small fw-bold">Camera-tips-mp4</h6>
+                                <small class="text-muted">24.5MB | 00.25S</small>
+                            </div>
+                            <button type="button" class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="br-alert-success mb-4">
+                        <div class="d-flex align-items-center">
+                            <i class="fal fa-check-circle me-2 fs-30"></i>
+                            <div>
+                                <p class="requirements-text">Great! Your video meets the requirements</p>
+                                <small>30s max | 50MB max</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="section-title">Add Details</h5>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Caption<span class="text-danger">*</span></label>
+                        <textarea class="form-control br-input rell-dec-text-area" rows="3"
+                            placeholder="3 tips for getting the best shots while travelling!"></textarea>
+                        <div class="text-end mt-1"><small class="text-muted">80/150</small></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Add Tags: <span class="text-muted fw-normal">limit of 5
+                                (optional)</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control br-input" placeholder="e.g., #trade, #tips, #help">
+                            <button class="btn btn-dark px-4" type="button">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold mb-0">Cover (optional)</label>
+                        <p class="text-muted small mt-0">Choose a thumbnail that represents your reel</p>
+                        <div class="br-cover-upload position-relative">
+
+                            <!-- hidden file input -->
+                            <input type="file" id="uploadFile" class="d-none" accept="image/*">
+
+                            <!-- clickable design -->
+                            <label for="uploadFile" class="upload-box text-center d-block">
+                                <i class="fal fa-plus mb-1"></i>
+                                <span class="gallery-photo-add">Add from gallery</span>
+
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="br-modal-footer">
+                    <button type="button" class="btn btn-cancel" onclick="toggleModal('rell__uplode')">Cancel</button>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-draft">Save as Draft</button>
+                        <a href="preview-reel.html" class="btn btn-preview ">Preview the Reel <i
+                                class="fal fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- backdrop modal -->
+        <div onclick="toggleModal('rell__uplode')" class="modal_backdrop"></div>
+    </section>
+
+    <!-- Template rtl start -->
+    <div class="rs-template-settings">
+        <div class="rs-template-settings-top">
+            <div class="rs-template-settings-icon">
+                <i class="far fa-cog"></i>
+            </div>
+            <h3 class="rs-template-settings-title">
+                Template Settings
+            </h3>
+            <div class="rs-template-settings-button mb-10 d-flex align-items-center justify-content-between">
+                <button class="active"><i class="far fa-moon"></i>Dark</button>
+                <button><i class="far fa-sun"></i>Light</button>
+            </div>
+            <div
+                class="rs-template-settings-button rs-template-settings-button-rtl d-flex align-items-center justify-content-between">
+                <button>Rtl</button>
+                <button class="active">Ltr</button>
+            </div>
+        </div>
+    </div>
+    <!-- Template rtl end -->
+
+    <div id="smooth">
+        <div id="smooth">
+            <header>
+                <div class="rs-header-area">
+                    <div class="container">
+                        <div class="rs-header-top">
+                            <div class="row align-items-center">
+                                <div class="col-xl-4 col-lg-4 col-md-3 col-9">
+                                    <div class="rs-header-logo">
+                                        <a href="index.html">
+                                            <img src="assets/img/logo/header-logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-9 col-3">
+                                    <div class="rs-header-top-right d-flex align-items-center justify-content-end">
+                                        <a href="javascript:void(0)"
+                                            class="rs-header-notification d-flex align-items-center d-none d-md-block">
+                                            <i class="rs-header-notification-icon">
+                                                <img src="assets/img/icon/bell.svg" alt="">
+                                            </i>
+                                            <span>Notification</span>
+                                            <cite>
+                                                2
+                                            </cite>
+                                        </a>
+                                        <a href="javascript:void(0)"
+                                            class="rs-header-heart d-flex align-items-center d-none d-md-block">
+                                            <i class="rs-header-heart-icon">
+                                                <img src="assets/img/icon/heart.svg" alt="">
+                                            </i>
+                                            <span>Wishlist</span>
+                                            <cite>
+                                                2
+                                            </cite>
+                                        </a>
+                                        <a href="post-ad.html"
+                                            class="rs-header-btn rs-btn d-flex align-items-center d-none d-md-block">
+                                            Post Your Ad
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M15 7H9V1C9 0.448 8.552 0 8 0C7.448 0 7 0.448 7 1V7H1C0.448 7 0 7.448 0 8C0 8.552 0.448 9 1 9H7V15C7 15.552 7.448 16 8 16C8.552 16 9 15.552 9 15V9H15C15.552 9 16 8.552 16 8C16 7.448 15.552 7 15 7Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </a>
+                                        <div class="rs-header-abtar tp-header-author p-relative">
+                                            <img src="assets/img/abter/header-abtar.png" alt="">
+                                            <div class="tp-header-author-thumb-more p-absolute">
+                                                <a href="sign-in.html">
+                                                    <i class="fal fa-sign-in"></i>
+                                                    Sign In
+                                                </a>
+                                                <a href="profile.html">
+                                                    <i class="fal fa-user-alt"></i>
+                                                    Profile
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fal fa-user-plus"></i>
+                                                    Add acount
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fal fa-sign-in"></i>
+                                                    Login
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fal fa-sign-in"></i>
+                                                    User Login
+                                                </a>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fal fa-sign-out"></i>
+                                                    Logout
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rs-header-bottom">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xl-6 col-lg-7 col-md-12">
+                                    <div class="rs-header-main-menu d-none d-lg-block">
+                                        <nav class="tp-mobile-menu-active">
+                                            <ul>
+                                                <li>
+                                                    <a href="index.html">Home
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                                                            viewBox="0 0 10 6" fill="currentColor">
+                                                            <path
+                                                                d="M5.00002 5.75076C4.80802 5.75076 4.61599 5.67778 4.46999 5.53079L0.469994 1.53079C0.176994 1.23779 0.176994 0.76275 0.469994 0.46975C0.762994 0.17675 1.23803 0.17675 1.53103 0.46975L5.001 3.93972L8.47097 0.46975C8.76397 0.17675 9.23901 0.17675 9.53201 0.46975C9.82501 0.76275 9.82501 1.23779 9.53201 1.53079L5.53201 5.53079C5.38401 5.67778 5.19202 5.75076 5.00002 5.75076Z"
+                                                                fill="currentColor" />
+                                                        </svg>
+                                                    </a>
+                                                    <div class="tp-megamenu-wrapper-2">
+                                                        <div class="row gx-0">
+                                                            <div class="tp-megamenu-list tp-megamenu-list-2">
+                                                                <ul class="rs-home-menu">
+                                                                    <li><a href="index.html">Home</a></li>
+                                                                    <li><a href="profile.html">My Profile</a></li>
+                                                                    <li><a href="seler-profile.html">Seler-Profile</a>
+                                                                    </li>
+                                                                    <li><a href="post-ad.html">Post-Ad</a></li>
+                                                                    <li><a href="about.html">Our-About</a></li>
+                                                                    <li><a
+                                                                            href="product-details.html">Product-Details</a>
+                                                                    </li>
+                                                                    <li><a href="product-list.html">Product-List</a>
+                                                                    </li>
+
+                                                                    <li><a
+                                                                            href="my-product-details.html">My-Product-Details</a>
+                                                                    </li>
+                                                                    <li><a href="about.html">Our-About</a></li>
+                                                                    <li><a href="contact.html">Contact</a></li>
+                                                                    <li><a href="log-in.html">Login</a></li>
+                                                                    <li><a href="sign-up.html">Sign-Up</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Category
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+                                                            viewBox="0 0 10 6" fill="currentColor">
+                                                            <path
+                                                                d="M5.00002 5.75076C4.80802 5.75076 4.61599 5.67778 4.46999 5.53079L0.469994 1.53079C0.176994 1.23779 0.176994 0.76275 0.469994 0.46975C0.762994 0.17675 1.23803 0.17675 1.53103 0.46975L5.001 3.93972L8.47097 0.46975C8.76397 0.17675 9.23901 0.17675 9.53201 0.46975C9.82501 0.76275 9.82501 1.23779 9.53201 1.53079L5.53201 5.53079C5.38401 5.67778 5.19202 5.75076 5.00002 5.75076Z"
+                                                                fill="currentColor" />
+                                                        </svg>
+                                                    </a>
+                                                    <div class="tp-megamenu-wrapper ">
+                                                        <div class="row gx-0">
+                                                            <div class="tp-megamenu-list">
+                                                                <ul>
+                                                                    <li class="has-dropdown p-relative"><a
+                                                                            href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a>
+                                                                        <ul class="sub-dropdown p-absolute">
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Modern Agency</a></li>
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Design Studio</a></li>
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Digital Marketing</a>
+                                                                            </li>
+                                                                            <li><a href="javascript:void(0)"><img
+                                                                                        src="assets/img/cat/cat-04.png"
+                                                                                        alt=""> Creative Studio</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Modern Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Digital Marketing</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Studio</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Design Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Creative Agency</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            Architecture Hub</a></li>
+                                                                    <li><a href="javascript:void(0)"><img
+                                                                                src="assets/img/cat/cat-04.png" alt="">
+                                                                            AI Image Generator</a></li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><a href="javascript:void(0)">Most Popular</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-5 col-md-12">
+                                    <div class="rs-header-form">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Product Hare.">
+                                            <a href="javascript:void(0)">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M22 22L20 20" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </form>
+                                        <div class="rs-offcanvas-btn">
+                                            <button class="d-lg-none d-md-block">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 20 20" fill="none">
+                                                    <path
+                                                        d="M2.94801 5.07455C1.84307 5.08612 0.938738 4.19953 0.927183 3.09559C0.915628 1.99165 1.8012 1.08634 2.90614 1.07477C4.01108 1.0632 4.91541 1.94979 4.92696 3.05373C4.93852 4.15767 4.05295 5.06299 2.94801 5.07455ZM11.9266 2.98046C11.915 1.87652 11.0107 0.989939 9.90576 1.0015C8.80082 1.01307 7.91524 1.91839 7.9268 3.02233C7.93835 4.12627 8.84268 5.01285 9.94762 5.00129C11.0526 4.98972 11.9381 4.0844 11.9266 2.98046ZM18.9262 2.9072C18.9146 1.80326 18.0103 0.916674 16.9054 0.928239C15.8004 0.939805 14.9149 1.84512 14.9264 2.94906C14.938 4.053 15.8423 4.93959 16.9472 4.92802C18.0522 4.91645 18.9378 4.01114 18.9262 2.9072ZM5.00023 10.0533C4.98867 8.9494 4.08435 8.06282 2.97941 8.07439C1.87447 8.08595 0.988893 8.99127 1.00045 10.0952C1.012 11.1991 1.91633 12.0857 3.02127 12.0742C4.12621 12.0626 5.01178 11.1573 5.00023 10.0533ZM11.9998 9.98008C11.9883 8.87614 11.084 7.98956 9.97902 8.00112C8.87408 8.01269 7.98851 8.91801 8.00006 10.0219C8.01162 11.1259 8.91595 12.0125 10.0209 12.0009C11.1258 11.9893 12.0114 11.084 11.9998 9.98008ZM18.9995 9.90681C18.9879 8.80287 18.0836 7.91629 16.9786 7.92786C15.8737 7.93942 14.9881 8.84474 14.9997 9.94868C15.0112 11.0526 15.9156 11.9392 17.0205 11.9276C18.1254 11.9161 19.011 11.0108 18.9995 9.90681ZM5.07349 17.053C5.06194 15.949 4.15761 15.0624 3.05267 15.074C1.94773 15.0856 1.06216 15.9909 1.07371 17.0948C1.08527 18.1988 1.9896 19.0853 3.09454 19.0738C4.19948 19.0622 5.08505 18.1569 5.07349 17.053ZM12.0731 16.9797C12.0616 15.8758 11.1572 14.9892 10.0523 15.0007C8.94735 15.0123 8.06178 15.9176 8.07333 17.0216C8.08489 18.1255 8.98921 19.0121 10.0942 19.0005C11.1991 18.989 12.0847 18.0836 12.0731 16.9797ZM19.0727 16.9064C19.0612 15.8025 18.1568 14.9159 17.0519 14.9275C15.947 14.939 15.0614 15.8444 15.0729 16.9483C15.0845 18.0522 15.9888 18.9388 17.0938 18.9273C18.1987 18.9157 19.0843 18.0104 19.0727 16.9064Z"
+                                                        fill="#DD5454" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header end -->
+            <main>
+                <!-- profile area start -->
+                <section class="rs-profile-area mt-32 mb-20">
+                    <div class="container">
+                        <div class="rell-header">
+                            <h2 class="rell">Barter Reels</h2>
+                            <p>Discover quick tips, success stories and creative ways to barter</p>
+                        </div>
+
+                        <div class="rell-body tab-wrapper">
+                            <div class="tab-btn mb-24">
+                                <button data-tab="for-you" class="active">For You</button>
+                                <button data-tab="following">Following</button>
+                                <button data-tab="trending">Trending</button>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-7 col-xl-8">
+                                    <div id="for-you" class="short-rell d-grid tab-content">
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video p-relative">
+                                            <video class="short-video" width="100%" height="400px">
+                                                <source src="assets/img/video/short.mp4" type="video/mp4">
+                                            </video>
+
+                                            <div class="video_dic p-12 p-absolute">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="#" class="author">
+                                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                                        <a href="" class="name">
+                                                            <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <h5>
+                                                        5 things I am looking for barter trades
+                                                    </h5>
+                                                </div>
+                                                <div class="has-tag d-flex align-items-center gap-2">
+                                                    <a href="#">#bartertips</a>
+                                                    <a href="#">#bartertips</a>
+                                                </div>
+
+                                                <div
+                                                    class="rell-opinion d-flex align-items-center justify-content-between">
+                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
+                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
+                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
+                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="play_btn">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div id="following" class="following tab-content d-none">
+                                        Following
+                                    </div>
+                                    <div id="trending" class="Trending tab-content d-none">
+                                        Trending
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-5 col-xl-4">
+                                    <div class="create-share mb-20">
+                                        <h4 class="title">
+                                            Create & Share
+                                        </h4>
+                                        <p>
+                                            Upload a short reel (max 30s, 50MB) <br> and inspire the community.
+                                        </p>
+                                        <div class="uplode_rell">
+                                            <button type="button" onclick="toggleModal('rell__uplode')"
+                                                class="upload-btn">
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5.3501 5.29442L9.8501 0.849976M9.8501 0.849976L14.3501 5.29442M9.8501 0.849976V11.5166M18.8501 11.5166V15.0722C18.8501 15.5437 18.6605 15.9959 18.3229 16.3293C17.9853 16.6627 17.5275 16.85 17.0501 16.85H2.6501C2.17271 16.85 1.71487 16.6627 1.37731 16.3293C1.03974 15.9959 0.850098 15.5437 0.850098 15.0722V11.5166"
+                                                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                                Upload Reel
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="rell_trending_hashtags mb-20">
+                                        <h5 class="trending-title">Trending Hashtags</h5>
+
+                                        <div class="hashtag-list">
+                                            <div class="hashtag-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="hash-icon-box">#</div>
+                                                    <span class="hash-name">bartertips</span>
+                                                </div>
+                                                <span class="hash-count">12.4K reels</span>
+                                            </div>
+                                            <div class="hashtag-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="hash-icon-box">#</div>
+                                                    <span class="hash-name">bartertips</span>
+                                                </div>
+                                                <span class="hash-count">12.4K reels</span>
+                                            </div>
+
+                                            <div class="hashtag-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="hash-icon-box">#</div>
+                                                    <span class="hash-name">successstories</span>
+                                                </div>
+                                                <span class="hash-count">8.7K reels</span>
+                                            </div>
+
+                                            <div class="hashtag-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="hash-icon-box">#</div>
+                                                    <span class="hash-name">bartertips</span>
+                                                </div>
+                                                <span class="hash-count">12.4K reels</span>
+                                            </div>
+
+                                            <div class="hashtag-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="hash-icon-box">#</div>
+                                                    <span class="hash-name">successstories</span>
+                                                </div>
+                                                <span class="hash-count">8.7K reels</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="new_to_reels">
+                                        <h5 class="reels-card-title">New to Reels?</h5>
+                                        <p class="reels-card-text">
+                                            Short videos get more views and help you connect faster. Start by sharing
+                                            your bartering story!
+                                        </p>
+                                        <a href="#" class="reels-card-link">
+                                            Learn how to make great reels
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" class="ms-1">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- rell area end -->
+
+
+
+            </main>
+
+            <!-- footer start -->
+            <footer class="rs-footer-area mt-100" data-bg-color="#17181D">
+                <div class="container">
+                    <div class="rs-footer-top pb-24 mb-24">
+                        <div class="row align-items-center">
+                            <div class="col-xl-8 col-lg-8 col-md-5 col-12">
+                                <div class="rs-footer-logo">
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/img/logo/footer-logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-7 col-12">
+                                <div class="rs-footer-top-right">
+                                    <div
+                                        class="rs-footer-social d-flex align-items-center gap-16 justify-content-end mb-24">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/facebook.svg" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/twitter.svg" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/instagram.svg" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/you-tube.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="rs-footer-download-app d-flex align-items-center justify-content-end gap-15">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/download-play-store.png" alt="">
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/img/icon/download-apple.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="rs-footer-widget">
+                                <div class="rs-footer-widget-content">
+                                    <h3 class="rs-footer-widget-title">
+                                        Quick link
+                                    </h3>
+                                    <div class="rs-footer-widget-menu">
+                                        <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="javascript:void(0)">Most Popular</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="rs-footer-widget rs-footer-widget-2">
+                                <div class="rs-footer-widget-content">
+                                    <h3 class="rs-footer-widget-title">
+                                        Others Link
+                                    </h3>
+                                    <div class="rs-footer-widget-menu">
+                                        <ul>
+                                            <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                                            <li><a href="javascript:void(0)">Terms of Use</a></li>
+                                            <li><a href="javascript:void(0)">Legal</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="rs-footer-widget rs-footer-widget-3">
+                                <div class="rs-footer-widget-content">
+                                    <h3 class="rs-footer-widget-title">
+                                        Contact
+                                    </h3>
+                                    <div class="rs-footer-contact">
+                                        <a href="mailto:support@razinsoft.com" class="d-flex align-items-center gap-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                viewBox="0 0 25 24" fill="none">
+                                                <path
+                                                    d="M18.3335 20.75H6.3335C3.9155 20.75 2.5835 19.418 2.5835 17V8C2.5835 5.582 3.9155 4.25 6.3335 4.25H18.3335C20.7515 4.25 22.0835 5.582 22.0835 8V17C22.0835 19.418 20.7515 20.75 18.3335 20.75ZM6.3335 5.75C4.7565 5.75 4.0835 6.423 4.0835 8V17C4.0835 18.577 4.7565 19.25 6.3335 19.25H18.3335C19.9105 19.25 20.5835 18.577 20.5835 17V8C20.5835 6.423 19.9105 5.75 18.3335 5.75H6.3335ZM13.3625 13.179L18.2744 9.60699C18.6094 9.36399 18.6835 8.89401 18.4395 8.55901C18.1965 8.22501 17.7286 8.149 17.3916 8.394L12.4795 11.966C12.3915 12.03 12.2745 12.03 12.1865 11.966L7.27441 8.394C6.93641 8.149 6.46956 8.22601 6.22656 8.55901C5.98256 8.89401 6.0566 9.36299 6.3916 9.60699L11.3035 13.18C11.6115 13.404 11.9725 13.515 12.3325 13.515C12.6925 13.515 13.0555 13.403 13.3625 13.179Z"
+                                                    fill="white" />
+                                            </svg>
+                                            support@razinsoft.com
+                                        </a>
+                                        <a href="tel:+01963953998" class="d-flex align-items-center gap-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                viewBox="0 0 25 24" fill="none">
+                                                <path
+                                                    d="M16.8856 21.7534C16.4266 21.7534 15.9646 21.6914 15.5086 21.5664C9.3436 19.8744 4.46259 14.9964 2.76959 8.83539C2.38459 7.43439 2.59554 5.97438 3.36554 4.72638C4.13854 3.47238 5.4096 2.58738 6.8526 2.29938C7.8126 2.10738 8.76159 2.53539 9.24859 3.35639L10.8116 5.99637C11.5706 7.27837 11.1935 8.92937 9.95245 9.75537L8.82159 10.5074C9.87859 12.6774 11.6564 14.4604 13.8174 15.5164L14.5796 14.3794C15.4106 13.1404 17.0616 12.7694 18.3426 13.5324L20.9857 15.1084C21.8037 15.5964 22.2266 16.5514 22.0406 17.4834C21.7526 18.9264 20.8676 20.1974 19.6146 20.9704C18.7726 21.4884 17.8356 21.7534 16.8856 21.7534ZM7.31158 3.75138C7.26258 3.75138 7.21261 3.75639 7.16461 3.76639C6.11061 3.97739 5.19761 4.61237 4.64361 5.51337C4.09461 6.40337 3.94359 7.44238 4.21759 8.43738C5.77059 14.0904 10.2496 18.5674 15.9056 20.1194C16.9016 20.3924 17.9375 20.2404 18.8265 19.6924C19.7265 19.1374 20.3626 18.2234 20.5696 17.1874C20.6316 16.8764 20.4906 16.5574 20.2166 16.3944L17.5745 14.8184C16.9795 14.4644 16.2115 14.6374 15.8255 15.2124L14.7105 16.8774C14.5105 17.1754 14.1246 17.2894 13.7986 17.1514C10.8356 15.9124 8.42463 13.4964 7.18463 10.5224C7.04663 10.1904 7.16249 9.80838 7.46149 9.60938L9.12262 8.50437C9.69862 8.12137 9.87357 7.35437 9.52057 6.75937L7.95758 4.12036C7.82058 3.88836 7.57258 3.75138 7.31158 3.75138Z"
+                                                    fill="white" />
+                                            </svg>
+                                            01963953998
+                                        </a>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                                viewBox="0 0 25 24" fill="none">
+                                                <path
+                                                    d="M12.3335 2.25C7.5085 2.25 3.5835 6.175 3.5835 11C3.5835 16.118 8.28049 19.2199 11.3885 21.2729L11.9175 21.624C12.0435 21.708 12.1885 21.75 12.3335 21.75C12.4785 21.75 12.6235 21.708 12.7495 21.624L13.2785 21.2729C16.3865 19.2199 21.0835 16.118 21.0835 11C21.0835 6.175 17.1585 2.25 12.3335 2.25ZM12.4525 20.021L12.3335 20.1001L12.2145 20.021C9.20449 18.033 5.0835 15.311 5.0835 11C5.0835 7.002 8.3355 3.75 12.3335 3.75C16.3315 3.75 19.5835 7.002 19.5835 11C19.5835 15.311 15.4615 18.034 12.4525 20.021ZM12.3335 7.75C10.5415 7.75 9.0835 9.208 9.0835 11C9.0835 12.792 10.5415 14.25 12.3335 14.25C14.1255 14.25 15.5835 12.792 15.5835 11C15.5835 9.208 14.1255 7.75 12.3335 7.75ZM12.3335 12.75C11.3685 12.75 10.5835 11.965 10.5835 11C10.5835 10.035 11.3685 9.25 12.3335 9.25C13.2985 9.25 14.0835 10.035 14.0835 11C14.0835 11.965 13.2985 12.75 12.3335 12.75Z"
+                                                    fill="white" />
+                                            </svg>
+                                            44 Danwers, NY City, USA, 70-102
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rs-footer-copyright-area text-center">
+                            <div class="rs-footer-copyright-text">
+                                <p>© 2025 All right reserved by &nbsp;
+                                    <a href="javascript:void(0)"> RazinSoft</a>
+                                </p>
+                                <div class="rs-footer-copyright-border p-relative"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end -->
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- <script src="assets/js/gsap.min.js"></script> -->
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <!-- <script src="assets/js/tp-cursor.js"></script> -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/video-play.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

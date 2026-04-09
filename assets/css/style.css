@@ -107,6 +107,12 @@ a {
   width: 100%;
 }
 
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .m-img img {
   max-width: 100%;
 }
