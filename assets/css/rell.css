@@ -1194,7 +1194,6 @@ body.dark-mode .rell-details-card p {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
 }
 
 .dis_title .text-content {
@@ -1779,6 +1778,13 @@ body.dark-mode .rell-details-card p {
 
 
 .br-modal-footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+#rell__comment .br-modal-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
