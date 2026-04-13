@@ -22,6 +22,174 @@
 
 <body class="rs-magic-cursor">
 
+    <!-- rell__comment -->
+    <section id="rell__comment" class="modal_container">
+        <!-- modal content -->
+        <div class="modal_content br-upload-modal">
+            <form action="#">
+                <div class="br-modal-header">
+                    <h4 class="m-0">Reels Comments</h4>
+                    <button type="button" onclick="toggleModal('rell__comment')" class="close-icon">
+                        <i class="fal fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="rell__author">
+                    <div class="rs-massage-form-2-left d-flex align-items-center gap-2  p-relative">
+                        <button class="chat-back-btn d-md-none"><i class="fal fa-arrow-left"></i></button>
+                        <img src="./assets/img/abter/profile-img.png" alt="">
+                        <div class="name">
+                            <h4>
+                                Tarik Bin Aziz
+                            </h4>
+                            <div class="last-seen">
+                                <p>
+                                    last seen today at 1:18 pm
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#" class="author__follow">
+                            Follow
+                        </a>
+                    </div>
+                    <div class="title mt-6">
+                        <h5 class="dis_title">
+                            I am looking for barter trades involving five specific items or
+                            services, and I am open to exchanging value in a fair and
+                            mutually beneficial way.
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="rell-comment-modal-body">
+                    <div class="rells__comment">
+                        <div class="rells__comment__top__content">
+                            <div class="rells__comment__top__content__tab__btn">
+                                <button>Most relevant</button>
+                            </div>
+                        </div>
+
+                        <div class="rells_comment_area">
+                            <!-- <div class="rells__comment__main__content">
+                                <div class="author d-flex align-items-start gap-2">
+                                    <a href="#">
+                                        <img src="assets/img/abter/header-abtar.png" alt="">
+                                    </a>
+                                    <div class="author__comment">
+                                        <a href="#" class="author_name">Tarik Bin Aziz</a>
+                                        <div class="title mt-6">
+                                            <h5 class="dis_title dis_title_2">
+                                                I am looking for barter trades involving five specific items or
+                                                services, and I am open to exchanging value in a fair and
+                                                mutually beneficial way.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="author__comment_info">
+                                <span>1h</span>
+                                <div class="rells__like">
+                                    <a href="#" class="like-btn">
+                                        <i>Like</i>
+                                        <span class="like-count"></span>
+                                    </a>
+                                </div>
+                                <div class="rells__comments_reply p-relative">
+                                    <buton class="like-btn reply-btn">
+                                        Reply
+                                    </buton>
+                                    <div id="comment__reply__dropdown" class="dropdown__menu active">
+                                    </div>
+
+                                    <div class="rell_reply_textarea p-relative">
+
+                                        <textarea name="send__message" placeholder="Type a message"></textarea>
+
+                                        <button type="button" class="send-btn">
+                                            <i class="fal fa-paper-plane"></i>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="br-modal-footer">
+                    <div class="rell_main_comment">
+                        <textarea name="comment" placeholder="Write a comment..."></textarea>
+                        <button type="button" class="comment-send-btn">
+                            <i class="fal fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- backdrop modal -->
+        <div onclick="toggleModal('rell__comment')" class="modal_backdrop"></div>
+    </section>
+
+    <!-- rells__share -->
+    <section id="rells__share" class="modal_container">
+
+        <div class="modal_content br-upload-modal">
+
+            <!-- header -->
+            <div class="br-modal-header">
+                <h4 class="m-0">Reels Share To</h4>
+                <button type="button" onclick="toggleModal('rells__share')" class="close-icon">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+
+            <!-- body -->
+            <div class="share-body">
+
+                <!-- link box -->
+                <div class="share-input-box">
+                    <input type="text" value="https://your-link.com/reel/123" readonly>
+                    <button type="button">
+                        <i class="fal fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="share-grid icon-grid">
+
+                    <a href="#" class="share-item facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-item whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="share-item messenger"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#" class="share-item twitter"><i class="fab fa-twitter"></i></a>
+
+                    <a href="#" class="share-item telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="share-item linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="share-item instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="share-item reddit"><i class="fab fa-reddit-alien"></i></a>
+
+                    <a href="#" class="share-item pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" class="share-item tiktok"><i class="fab fa-tiktok"></i></a>
+
+                    <a href="#" class="share-item snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                    <a href="#" class="share-item skype"><i class="fab fa-skype"></i></a>
+
+                    <a href="#" class="share-item discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="share-item youtube"><i class="fab fa-youtube"></i></a>
+
+                    <a href="#" class="share-item email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="share-item copy"><i class="fas fa-link"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- backdrop -->
+        <div onclick="toggleModal('rells__share')" class="modal_backdrop"></div>
+    </section>
 
     <!-- Template rtl start -->
     <div class="rs-template-settings">
@@ -375,13 +543,19 @@
                                                 <div class="d-flex align-items-center gap-2">
                                                     <a href="#" class="author">
                                                         <img src="assets/img/abter/header-abtar.png" alt="">
-                                                        <a href="" class="name">
+                                                        <a href="#" class="name">
                                                             <h4>Adam Smith <i>.</i> <span>Author</span> </h4>
                                                         </a>
                                                     </a>
                                                 </div>
                                                 <div class="title">
                                                     <h5 class="dis_title">
+                                                        I am looking for barter trades involving five specific items or
+                                                        services, and I am open to exchanging value in a fair and
+                                                        mutually beneficial way.
+                                                        I am looking for barter trades involving five specific items or
+                                                        services, and I am open to exchanging value in a fair and
+                                                        mutually beneficial way.
                                                         I am looking for barter trades involving five specific items or
                                                         services, and I am open to exchanging value in a fair and
                                                         mutually beneficial way.
@@ -392,12 +566,28 @@
                                                     <a href="#">#bartertips</a>
                                                 </div>
 
-                                                <div
-                                                    class="rell-opinion d-flex align-items-center justify-content-between">
-                                                    <a href="#"><i class="fal fa-thumbs-up"></i>24</a>
-                                                    <a href="#"><i class="fal fa-comment"></i>12</a>
-                                                    <a href="#"><i class="far fa-bookmark"></i>8</a>
-                                                    <a href="#"><i class="fal fa-share"></i>2</a>
+                                                <div class="rell-opinion align-items-center justify-content-between">
+                                                    <div class="rells__like">
+                                                        <a href="javascript:void(0)" class="like-btn">
+                                                            <i class="fal fa-thumbs-up"></i>
+                                                            <span class="like-count"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="rells__comment" onclick="toggleModal('rell__comment')">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="fal fa-comment"></i>
+                                                            <span class="comment-count">1</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="rells__save">
+                                                        <a href="javascript:void(0)" class="save-btn">
+                                                            <i class="far fa-bookmark"></i>
+                                                            <span class="save-count"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="rells__share" onclick="toggleModal('rells__share')">
+                                                        <a href="javascript:void(0)"><i class="fal fa-share"></i>2</a>
+                                                    </div>
                                                 </div>
                                             </div>
 

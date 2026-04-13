@@ -43,33 +43,24 @@ tx.forEach(textarea => {
 
 
 //=============== icon show hide ===============//
-document.addEventListener("DOMContentLoaded", function () {
+document.querySelectorAll('.rells__comments_reply').forEach(box => {
 
-    const textareas = document.querySelectorAll('textarea');
-    const micIcon = document.getElementById('micIcon');
-    const sendIcon = document.getElementById('sendIcon');
+    const textarea = box.querySelector('textarea');
+    const micIcon = box.querySelector('#micIcon');
+    const sendIcon = box.querySelector('#sendIcon');
 
-    textareas.forEach(textarea => {
-        textarea.addEventListener('input', () => {
+    if (!textarea || !micIcon || !sendIcon) return;
 
-            // check any textarea has value //
-            let hasValue = false;
+    textarea.addEventListener('input', () => {
 
-            textareas.forEach(t => {
-                if (t.value.trim() !== '') {
-                    hasValue = true;
-                }
-            });
+        if (textarea.value.trim() !== '') {
+            micIcon.classList.add('d-none');
+            sendIcon.classList.remove('d-none');
+        } else {
+            micIcon.classList.remove('d-none');
+            sendIcon.classList.add('d-none');
+        }
 
-            if (hasValue) {
-                micIcon.classList.add('d-none');
-                sendIcon.classList.remove('d-none');
-            } else {
-                micIcon.classList.remove('d-none');
-                sendIcon.classList.add('d-none');
-            }
-
-        });
     });
 
 });

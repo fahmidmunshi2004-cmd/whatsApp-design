@@ -136,9 +136,6 @@ document.querySelectorAll('.tab-wrapper').forEach(wrapper => {
 });
 
 
-
-
-
 //=============================== uplode video ===============================//
 const fileInput = document.querySelector('.br-upload-zone input');
 const fileCard = document.querySelector('.br-file-card');
@@ -178,9 +175,6 @@ if (!fileInput || !fileCard) {
     });
 
 }
-
-
-
 
 
 //================ thum img ========================//
@@ -246,9 +240,7 @@ if (!input || !box) {
 
         reader.readAsDataURL(file);
     }
-
 }
-
 
 
 //================ video  progress ========================//
@@ -324,9 +316,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
 // ================= time update ================= //
 document.querySelectorAll('.video').forEach(container => {
     const video = container.querySelector('video');
@@ -392,69 +381,274 @@ document.querySelectorAll('.video').forEach(container => {
 
 
 // ================= text truncate ================= //
-document.querySelectorAll('.dis_title').forEach(el => {
+document.querySelectorAll('.dis_title, .dis_title_2').forEach(el => {
 
     const fullText = el.textContent.trim();
-    const limit = 30;
+
+    const limit = el.classList.contains('dis_title_2') ? 120 : 30;
 
     if (fullText.length <= limit) return;
 
-    let shortText = fullText.substring(0, limit) + '...';
+    const shortText = fullText.substring(0, limit) + '...';
+
     let isExpanded = false;
 
     el.innerHTML = `
-        <span class="text-content">
+        <span class="text-content d-flex flex-colamun">
             <span class="text">${shortText}</span>
-            <button class="toggle-btn">Show more</button>
-        </span>
+
+            </span>
+        <div class="btn-group">
+            <button type="button" class="show-more toggle-btn">Show more</button>
+            <button type="button" class="show-less toggle-btn" style="display:none;">Show less</button>
+        </div>
     `;
 
     const textWrapper = el.querySelector('.text');
-    const btn = el.querySelector('.toggle-btn');
+    const showMoreBtn = el.querySelector('.show-more');
+    const showLessBtn = el.querySelector('.show-less');
 
-    // smooth base styles //
-    textWrapper.style.transition = "opacity 0.25s ease";
-    textWrapper.style.display = "inline";
-
-    function animateChange(newText, btnText) {
-        // fade out //
+    function setText(text) {
         textWrapper.style.opacity = '0';
 
         setTimeout(() => {
-            textWrapper.textContent = newText;
+            textWrapper.textContent = text;
             textWrapper.style.opacity = '1';
         }, 150);
-
-        btn.textContent = btnText;
     }
 
-    function expand() {
-        animateChange(fullText, 'Show less');
-        isExpanded = true;
-    }
-
-    function collapse() {
-        animateChange(shortText, 'Show more');
-        isExpanded = false;
-    }
-
-    btn.addEventListener('click', function (e) {
+    showMoreBtn.addEventListener('click', function (e) {
         e.stopPropagation();
-        isExpanded ? collapse() : expand();
+
+        setText(fullText);
+        showMoreBtn.style.display = "none";
+        showLessBtn.style.display = "inline-block";
+
+        isExpanded = true;
     });
 
-    // ================= GLOBAL CLICK ================= //
+    showLessBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        setText(shortText);
+        showMoreBtn.style.display = "inline-block";
+        showLessBtn.style.display = "none";
+
+        isExpanded = false;
+    });
+
     document.addEventListener('click', function (e) {
         if (!isExpanded) return;
         if (el.contains(e.target)) return;
-        collapse();
-    });
 
-    // ================= VIDEO CLICK ================= //
-    document.querySelectorAll('.video video').forEach(video => {
-        video.addEventListener('click', function () {
-            if (isExpanded) collapse();
-        });
+        setText(shortText);
+        showMoreBtn.style.display = "inline-block";
+        showLessBtn.style.display = "none";
+
+        isExpanded = false;
     });
 
 });
+
+
+// ================= rells like & save ================= //
+document.addEventListener('click', function (e) {
+
+    const btn = e.target.closest('.like-btn, .save-btn');
+    if (!btn) return;
+
+    const icon = btn.querySelector('i');
+    const countEl = btn.querySelector('span');
+
+    let count = parseInt(countEl?.textContent.trim() || "0");
+    let active = btn.classList.contains('active');
+
+    const isLike = btn.classList.contains('like-btn');
+
+    active = !active;
+    btn.classList.toggle('active', active);
+
+    count = active ? count + 1 : Math.max(0, count - 1);
+    if (countEl) countEl.textContent = count;
+
+    if (isLike) {
+        icon?.classList.toggle('fas', active);
+        icon?.classList.toggle('fal', !active);
+        btn.classList.toggle('liked', active);
+    } else {
+        icon?.classList.toggle('fas', active);
+        icon?.classList.toggle('far', !active);
+        btn.classList.toggle('saved', active);
+    }
+
+});
+
+
+//================= rells__comments_reply ===================//
+document.addEventListener('click', function (e) {
+
+    // reply open
+    const replyBtn = e.target.closest('.reply-btn');
+    if (replyBtn) {
+        e.preventDefault();
+
+        const box = replyBtn.closest('.rells__comments_reply');
+        const textareaBox = box.querySelector('.rell_reply_textarea');
+        const textarea = box.querySelector('textarea');
+
+        textareaBox.classList.toggle('show');
+        textarea.focus();
+    }
+
+    // send reply
+    const sendBtn = e.target.closest('.send-btn');
+    if (sendBtn) {
+
+        const box = sendBtn.closest('.rells__comments_reply');
+        const textarea = box.querySelector('textarea');
+        const dropdown = box.querySelector('.dropdown__menu');
+
+        const text = textarea.value.trim();
+        if (!text) return;
+
+        const html = `
+            <div class="rells__comment__main__content">
+                <div class="author d-flex align-items-start gap-2">
+                    <a href="#">
+                        <img src="assets/img/abter/header-abtar.png" alt="">
+                    </a>
+                    <div class="author__comment">
+                        <a href="#" class="author_name">You</a>
+                        <div class="title mt-6">
+                            <h5 class="dis_title dis_title_3">
+                                <span class="text">${text}</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        dropdown?.insertAdjacentHTML('beforeend', html);
+
+        textarea.value = "";
+        box.querySelector('.rell_reply_textarea').classList.remove('show');
+        dropdown?.classList.add('show');
+
+        initTruncate();
+    }
+
+});
+
+
+//================= main comments ===================//
+document.addEventListener("DOMContentLoaded", function () {
+
+    window.initTruncate = function (parent = document) {
+        parent.querySelectorAll('.dis_title').forEach(el => {
+
+            if (el.dataset.done) return;
+            el.dataset.done = "true";
+
+            const fullText = el.textContent.trim();
+            const limit = 120;
+
+            if (fullText.length <= limit) return;
+
+            const shortText = fullText.substring(0, limit) + '...';
+            let isOpen = false;
+
+            el.innerHTML = `
+                <span class="text">${shortText}</span>
+                <button type="button" class="toggle-btn">Show more</button>
+            `;
+
+            const text = el.querySelector('.text');
+            const btn = el.querySelector('.toggle-btn');
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                text.textContent = isOpen ? shortText : fullText;
+                btn.textContent = isOpen ? "Show more" : "Show less";
+
+                isOpen = !isOpen;
+            });
+        });
+    }
+
+    initTruncate();
+
+
+    const modalInput = document.querySelector('.rell_main_comment textarea');
+    const sendBtn = document.querySelector('.comment-send-btn');
+    const commentArea = document.querySelector('.rells_comment_area');
+
+    if (!modalInput || !sendBtn || !commentArea) return;
+
+    sendBtn.addEventListener('click', function () {
+
+        const text = modalInput.value.trim();
+        if (!text) return;
+
+        const html = `
+            <div class="rells__comment__main__content">
+                <div class="author d-flex align-items-start gap-2">
+                    <a href="#">
+                        <img src="assets/img/abter/header-abtar.png" alt="">
+                    </a>
+                    <div class="author__comment">
+                        <a href="#" class="author_name">You</a>
+                        <div class="title mt-6">
+                            <h5 class="dis_title dis_title_3">
+                                <span class="text">${text}</span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="author__comment_info">
+                <span>1h</span>
+                <div class="rells__like">
+                    <a href="#" class="like-btn">
+                        <i>Like</i>
+                        <span class="like-count"></span>
+                    </a>
+                </div>
+                <div class="rells__comments_reply p-relative">
+                    <buton class="like-btn reply-btn">
+                        Reply
+                    </buton>
+                    <div id="comment__reply__dropdown" class="dropdown__menu active">
+                    </div>
+
+                    <div class="rell_reply_textarea p-relative">
+
+                        <textarea name="send__message" placeholder="Type a message"></textarea>
+
+                        <button type="button" class="send-btn">
+                            <i class="fal fa-paper-plane"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        `;
+
+        commentArea.insertAdjacentHTML('beforeend', html);
+
+        modalInput.value = "";
+
+
+        initTruncate();
+    });
+
+});
+
+
+
+
+
+
+

@@ -1147,14 +1147,14 @@ body.dark-mode .rell-details-card p {
 
 
 .dis_title .toggle-btn {
-    background: #007BFF;
+    background: #007bff00;
     color: #ffffff;
     border: none;
     cursor: pointer;
     font-weight: 500;
     font-size: 12px;
     padding: 2px 10px;
-    margin-left: 6px;
+    margin-left: -3px;
     position: relative;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -1208,7 +1208,7 @@ body.dark-mode .rell-details-card p {
 
 
 
-/* Container Card */
+/*=========== Container Card ===========*/
 .reel-checks-card {
     background: #FFFFFF;
     border: 1px solid #F2F4F7;
@@ -1283,4 +1283,867 @@ body.dark-mode .rell-details-card p {
 
 .h-48 {
     height: 48px !important;
+}
+
+
+
+/* rtl mode */
+.rtl-mode .cover a {
+    right: auto;
+    left: 16px;
+}
+
+.rtl-mode .cover-box img {
+    margin-right: 0;
+    margin-left: 16px;
+}
+
+.rtl-mode .check-icon {
+    margin-right: 0;
+    margin-left: 16px;
+}
+
+
+.rells__like a,
+.rells__save a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    color: #777;
+}
+
+/* ===== LIKE ===== */
+.rells__like a.liked {
+    color: #ffffff;
+}
+
+.rells__like a.liked i {
+    animation: pop 0.5s ease;
+}
+
+.rells__like a:active {
+    transform: scale(0.96);
+}
+
+/* ===== SAVE ===== */
+.rells__save a.saved {
+    color: #fbbf24;
+}
+
+.rells__save a.saved i {
+    animation: pop 0.4s ease;
+}
+
+/* ===== COMMON POP ANIMATION ===== */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== GLOW EFFECT ===== */
+.rells__like a.liked::after,
+.rells__save a.saved::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: -1;
+    animation: glow 0.5s ease;
+}
+
+/* different colors */
+.rells__like a.liked::after {
+    background: rgba(24, 118, 242, 0.637);
+}
+
+.rells__save a.saved::after {
+    background: rgba(251, 191, 36, 0.3);
+}
+
+@keyframes glow {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.rell-opinion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+
+#rell__comment .modal_content {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 350px !important;
+    border-radius: 0;
+}
+
+#rell__comment.modal_container.active .modal_content {
+    right: 0;
+}
+
+
+.br-modal-header .close-icon {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #DD5454;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #DD5454;
+    background: #DD5454;
+    color: #fff;
+}
+
+/* hover effect */
+.br-modal-header .close-icon:hover {
+    background: transparent;
+    color: #DD5454;
+    border: 2px solid #DD5454;
+}
+
+/* smooth icon rotation feel */
+.br-modal-header .close-icon i {
+    transition: transform 0.3s ease;
+}
+
+.br-modal-header .close-icon:hover i {
+    transform: rotate(180deg);
+}
+
+
+
+#rell__comment .rell__author {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#rell__comment .br-modal-header {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#rell__comment .dis_title span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#rell__comment .dis_title button {
+    background: none;
+    color: #000;
+    margin-left: 0;
+}
+
+#rell__comment .dis_title button:hover {
+    text-decoration: underline;
+}
+
+
+
+.author__follow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    background: #1877f2;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.25s ease;
+    border: 1px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 27px;
+}
+
+/* hover effect */
+.author__follow:hover {
+    background: #0f66d6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.25);
+}
+
+/* click effect */
+.author__follow:active {
+    transform: scale(0.96);
+}
+
+.rell-comment-modal-body {
+    padding: 16px;
+}
+
+
+.rells__comment__top__content__tab__btn button {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #777;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin-bottom: 20px;
+}
+
+/* hover */
+/* .rells__comment__top__content__tab__btn button:hover {
+    background: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(24, 119, 242, 0.2);
+} */
+
+/* active / click */
+.rells__comment__top__content__tab__btn button:active {
+    transform: scale(0.96);
+}
+
+.rells__comment__main__content .author a img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.rells__comment__main__content .author a {
+    flex: 0 0 auto;
+}
+
+
+.rells__comment__main__content .author__comment {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    background: #f7f6f6;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.rells__comment__main__content .author__comment .author_name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rells__comment__main__content .author__comment .dis_title {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.rells__comment__main__content .author__comment .dis_title span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+
+
+.author__comment_info {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-left: 60px;
+    font-size: 14px;
+}
+
+.author__comment_info i {
+    color: #000;
+    font-style: normal;
+}
+
+.author__comment_info .rells__like a span {
+    color: #000;
+    font-style: normal;
+    margin-left: -4px !important;
+}
+
+.rells__comments_reply {
+    cursor: pointer;
+}
+
+#comment__reply__dropdown.dropdown__menu .rells__comment__main__content .author__comment {
+    background: #8ca5ff2b;
+}
+
+#comment__reply__dropdown.dropdown__menu {
+    position: inherit;
+    left: -73px;
+    top: 12px;
+    margin-top: 0;
+    width: 100%;
+    min-width: 270px;
+    background-color: #ffffff00;
+    border: 1px solid #e5e7eb00;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 50;
+    overflow: hidden;
+}
+
+
+.rell_reply_textarea {
+    width: 180px !important;
+    margin-top: -16px;
+}
+
+.rell_reply_textarea textarea {
+    width: 100%;
+    height: 48px !important;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.25s ease;
+    background: #fff;
+    color: #111;
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04); */
+    overflow-y: scroll !important;
+    scrollbar-width: none;
+}
+
+.rell_reply_textarea {
+    position: relative;
+}
+
+.rell_reply_textarea textarea {
+    padding: 12px 25px 12px 12px;
+}
+
+/* send button */
+.send-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.send-btn:hover {
+    transform: scale(1.1);
+}
+
+.send-btn i {
+    font-size: 14px;
+}
+
+/* focus effect */
+.rell_reply_textarea textarea:focus {
+    border-color: #DD5454;
+    /* your theme red */
+    /* box-shadow: 0 0 0 4px rgba(221, 84, 84, 0.15); */
+    transform: translateY(-1px);
+}
+
+/* placeholder style */
+.rell_reply_textarea textarea::placeholder {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* hover subtle effect */
+.rell_reply_textarea textarea:hover {
+    border-color: #cbd5e1;
+}
+
+
+
+.rell_reply_textarea {
+    display: none;
+}
+
+.rell_reply_textarea.show {
+    display: block;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+#comment__reply__dropdown.dropdown__menu .rells__comment__main__content {
+    margin-bottom: 10px;
+}
+
+#comment__reply__dropdown.dropdown__menu {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    left: -50px;
+    top: -3px;
+    margin-bottom: 16px;
+    scrollbar-width: none !important;
+    min-width: auto;
+    width: 250px;
+}
+
+
+.rell_main_comment textarea {
+    width: 100%;
+    height: 50px !important;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #f3f4f6;
+    border: 2px solid #f3f4f6;
+    outline: none;
+
+    font-size: 14px;
+    color: #111;
+
+    transition: all 0.25s ease;
+    overflow-y: scroll !important;
+    scrollbar-width: none;
+    padding-right: 50px;
+}
+
+/* focus effect */
+.rell_main_comment textarea:focus {
+    background: #ffffff;
+    border-color: #DD5454;
+}
+
+/* placeholder style */
+.rell_main_comment textarea::placeholder {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* hover subtle effect */
+.rell_main_comment textarea:hover {
+    background: #ffffff;
+}
+
+/* smooth feel */
+.rell_main_comment textarea {
+    transition: all 0.3s ease;
+}
+
+
+.rell_main_comment {
+    width: 100%;
+}
+
+
+.br-modal-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+
+
+
+
+
+.rell_main_comment {
+    position: relative;
+}
+
+.rell_main_comment .comment-send-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 50%;
+    transform: translateY(36%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #DD5454;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* hover effect */
+.rell_main_comment .comment-send-btn:hover {
+    background: #c93f3f;
+}
+
+/* click effect */
+.rell_main_comment .comment-send-btn:active {
+    transform: scale(0.95);
+}
+
+/* icon animation */
+.rell_main_comment .comment-send-btn i {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+
+.rell-comment-modal-body {
+    max-height: 68vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.author_name .title h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+.like-btn.active i,
+.like-btn.active span {
+    color: #DD5454 !important;
+    font-weight: 600;
+}
+
+
+.rell__author .chat-back-btn {
+    display: none !important;
+}
+
+#rells__share .modal_content {
+    max-width: 500px !important;
+}
+
+
+
+
+
+/* .modal_container {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+} */
+
+.modal_content {
+    width: 380px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    animation: pop .25s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.br-modal-header {
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.br-modal-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.close-icon {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* input */
+.share-input-box {
+    display: flex;
+    padding: 14px;
+    gap: 8px;
+}
+
+.share-input-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.share-input-box button {
+    width: 42px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+/* ================= GRID ================= */
+.share-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    padding: 14px;
+}
+
+/* ================= BASE ================= */
+.share-item {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform .25s ease, box-shadow .25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* icon */
+.share-item i {
+    font-size: 18px;
+    transition: transform .25s ease;
+}
+
+/* hover ONLY animation (no bg change) */
+.share-item:hover i {
+    animation: popUp .4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15) rotate(-8deg);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* ================= BRAND COLORS (ICON + BG SAME STYLE) ================= */
+
+/* Facebook */
+.facebook {
+    background: #1877F2;
+}
+
+.facebook i {
+    color: #fff;
+}
+
+/* WhatsApp */
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp i {
+    color: #fff;
+}
+
+/* Messenger */
+.messenger {
+    background: #0099FF;
+}
+
+.messenger i {
+    color: #fff;
+}
+
+/* Twitter (X style old blue) */
+.twitter {
+    background: #1DA1F2;
+}
+
+.twitter i {
+    color: #fff;
+}
+
+/* Telegram */
+.telegram {
+    background: #0088CC;
+}
+
+.telegram i {
+    color: #fff;
+}
+
+/* LinkedIn */
+.linkedin {
+    background: #0A66C2;
+}
+
+.linkedin i {
+    color: #fff;
+}
+
+/* Instagram */
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.instagram i {
+    color: #fff;
+}
+
+/* Reddit */
+.reddit {
+    background: #FF4500;
+}
+
+.reddit i {
+    color: #fff;
+}
+
+/* Pinterest */
+.pinterest {
+    background: #E60023;
+}
+
+.pinterest i {
+    color: #fff;
+}
+
+/* TikTok */
+.tiktok {
+    background: #000;
+}
+
+.tiktok i {
+    color: #fff;
+}
+
+/* Snapchat */
+.snapchat {
+    background: #FFFC00;
+}
+
+.snapchat i {
+    color: #000;
+}
+
+/* Skype */
+.skype {
+    background: #00AFF0;
+}
+
+.skype i {
+    color: #fff;
+}
+
+/* Discord */
+.discord {
+    background: #5865F2;
+}
+
+.discord i {
+    color: #fff;
+}
+
+/* YouTube */
+.youtube {
+    background: #FF0000;
+}
+
+.youtube i {
+    color: #fff;
+}
+
+/* Email */
+.email {
+    background: #444;
+}
+
+.email i {
+    color: #fff;
+}
+
+/* Copy */
+.copy {
+    background: #333;
+}
+
+.copy i {
+    color: #fff;
+}
+
+
+
+
+.rell_reply_textarea .send-btn {
+    background: none !important;
+}
+
+.video_dic .dis_title {
+    max-height: 65px;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
