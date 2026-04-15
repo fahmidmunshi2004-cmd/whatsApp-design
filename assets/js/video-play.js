@@ -651,4 +651,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+//================= reels slider ===================//
+var swiper = new Swiper(".rellsSwiper", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 30,
+    mousewheel: true,
+
+    navigation: {
+        nextEl: ".reels-button-next",
+        prevEl: ".reels-button-prev",
+    }
+});
 
